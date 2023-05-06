@@ -1,1874 +1,2153 @@
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-
-		<meta charset="utf-8">
-
-		<meta name="referrer" content="origin-when-cross-origin">
-
-		<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
-
-		<link rel="preload" as="font" href="/static/font/awesome/fa-solid-900-8a974141a639691d6a3c9175c3e28fbb.woff2" type="font/woff2" crossorigin>
-		<link rel="preload" as="font" href="/static/font/awesome/fa-light-300-ef019de8fa9891404a3d4a1c5a7082de.woff2" type="font/woff2" crossorigin>
-		<link rel="preload" as="font" href="/static/font/awesome/fa-brands-400-60bff1e2c2866fbb4ba9bd2cff6f6426.woff2" type="font/woff2" crossorigin>
-
-		<link rel="preload" as="font" href="/static/fonts/Poppins-Medium-38d1e05f4ced6a07a513a965bf546922.woff2" type="font/woff2" crossorigin>
-		<link rel="preload" as="font" href="/static/fonts/Poppins-SemiBold-e92fda8cc5c39b1a2836f33fb3d002ee.woff2" type="font/woff2" crossorigin>
-
-		<script defer data-domain="surrealdb.com" src="/js/script.js"></script>
-
-		<script defer src="/assets/vendor-6c0f29822546c30ceee9db0e5abb6c51.js" integrity="sha256-XnSLSoKu6NN2qpgWWa32I24/ADD9AmjsdFJ4EqtsNZo= sha512-Bf2g6/XDoFy7XiKKNafaDUe2p5TgykfpK73ZhF/IHBI14wpJxKIhGcMcEjyhPMGNdGpjJve+qj9b5d4SdPSkzA==" ></script>
-		<script defer src="/assets/surreal-10057084d23bdb51478030482a5aee26.js" integrity="sha256-6rlfjeiy4xYv9MmzxCd/FHk0EivXMnnNUXokcmqT2ko= sha512-vAxpSjU8eD5wqR+G7AfGIUUUC9nc3q2CdLbddyQ/RDuo8u84W3kueYxAaCNxIIPI/L1VC9QwHaVrCyUkZHLmbg==" ></script>
-
-		
-<!-- EMBER_CLI_FASTBOOT_TITLE --><script glmr="%cursor:0%"></script><!--%+b:10%-->	<!--%|%-->
-<!--%|%-->	<title>SurrealDB | The ultimate database for tomorrow's applications</title>
-	<meta name="description" content="SurrealDB is the ultimate database for tomorrow's serverless, jamstack, single-page, and traditional applications.">
-<!--%|%-->	<meta name="og:title" property="og:title" content="SurrealDB | The ultimate database for tomorrow's applications">
-	<meta name="og:description" property="og:description" content="SurrealDB is the ultimate database for tomorrow's serverless, jamstack, single-page, and traditional applications.">
-	<meta name="og:site_name" property="og:site_name" content="SurrealDB">
-	<meta name="og:type" property="og:type" content="website">
-	<meta name="og:url" property="og:url" content="https://surrealdb.com/">
-	<meta name="og:image" property="og:image" content="https://surrealdb.com/static/img/preview/main-f9d159594e8e86b1aef89c2aff73e5d4.jpg">
-<!--%|%-->	<meta name="twitter:site" content="@surrealdb">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="SurrealDB | The ultimate database for tomorrow's applications">
-	<meta name="twitter:description" content="SurrealDB is the ultimate database for tomorrow's serverless, jamstack, single-page, and traditional applications.">
-	<meta name="twitter:image" content="https://surrealdb.com/static/img/preview/main-f9d159594e8e86b1aef89c2aff73e5d4.jpg">
-	<meta name="twitter:image:src" content="https://surrealdb.com/static/img/preview/main-f9d159594e8e86b1aef89c2aff73e5d4.jpg">
-	<meta name="twitter:image:alt" content="SurrealDB is the ultimate database for tomorrow's serverless, jamstack, single-page, and traditional applications.">
-<!--%-b:10%-->
-<link rel="dns-prefetch" href="//surreal.io/">
-
-	<meta name="format-detection" content="date=no">
-	<meta name="format-detection" content="email=no">
-	<meta name="format-detection" content="address=no">
-	<meta name="format-detection" content="telephone=no">
-
-	<meta name="theme-color" content="#181a1f">
-	<meta name="msapplication-TileColor" content="#181a1f">
-
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="SurrealDB">
-	<meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-	<link rel="manifest" href="/static/manifest-65be9288c87a402a46c4b72056a90e7e.json">
-
-	<meta name="msapplication-config" content="/static/browserconfig-3180d4f59f6acf9b8a0c46170159e174.xml">
-
-	<link rel="mask-icon" href="/static/webapp/icon-dec8f861e44f1d58d06056e27d0ece7c.svg" color="#ff009e">
-
-	<link rel="shortcut icon" href="/static/webapp/favicon-a997a66737547e8ad3cac2ab9805ce13.png" type="image/png">
-
-	<link rel="icon" sizes="16x16" href="/static/webapp/icon-16x16-f4b662d7b28aed3faeb9d6d64ef14ee6.png">
-	<link rel="icon" sizes="32x32" href="/static/webapp/icon-32x32-a997a66737547e8ad3cac2ab9805ce13.png">
-	<link rel="icon" sizes="96x96" href="/static/webapp/icon-96x96-18ff6da0d84228b6dadc3f436d198e10.png">
-	<link rel="icon" sizes="128x128" href="/static/webapp/icon-128x128-80c0510d973999612e5b26cf4a6fdc8e.png">
-	<link rel="icon" sizes="192x192" href="/static/webapp/icon-192x192-2c2ad01a4e79db5275e7e2b1fc69ebb6.png">
-
-	<link rel="apple-touch-icon" sizes="57x57" href="/static/webapp/icon-57x57-1f95b30e8ebdcd38405500e57add0f59.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/static/webapp/icon-72x72-b86cdc2cdcfa8c382773465933ccf607.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/static/webapp/icon-76x76-ffb9b633393db9723671c49eebf647f8.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/static/webapp/icon-114x114-e47936a6fd8c607a522cf2b6d5981f83.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/static/webapp/icon-120x120-2a32820735891dd410329fd2ee05fd72.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/static/webapp/icon-144x144-2bdf4f54ecd2aed5dfdd84932493e4c6.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/static/webapp/icon-152x152-2d3da4396f287d39d9b808c7596d75bf.png">
-	<link rel="apple-touch-icon" sizes="167x167" href="/static/webapp/icon-167x167-714d3cccae1f736c0115921f46a95035.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/static/webapp/icon-180x180-b9999def2e3a37d76384269bc8918872.png">
-
-	<link rel="apple-touch-startup-image" href="/static/webapp/launch-640x1136-7cc7a23bd82b1764d725e2c060b9c825.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="/static/webapp/launch-750x1294-26047bf6c2e8257871811873eebd2536.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="/static/webapp/launch-1242x2148-ceaf6e4c53283969426861e523fd3c3c.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="/static/webapp/launch-1125x2436-03730963637a5f9988b4a412d1c1d074.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="/static/webapp/launch-1536x2048-26cd94849195ab87370fc1957be3057e.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="/static/webapp/launch-1668x2224-7e78a17b913cf7bf971d38d70f1841ee.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-	<link rel="apple-touch-startup-image" href="/static/webapp/launch-2048x2732-e194449d91122abb831acdee803fb7ce.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-	
-
-		<link rel="stylesheet" href="/assets/vendor-354a4bf70581e7d43ca959945521ed80.css" integrity="sha256-a1vnIDPMxVtjPFjWjzD1ZS7NZP8GcgGuq0z/Nzz3z5o= sha512-Zt6ld6t6mnwpmwGTfyc9WIo9BD/rBA576Dr6rqV5ch6uXaq2bEm8HPMp930Bj+dfBrdeQ9n0uOdgRk64jE6iKQ==" >
-		<link rel="stylesheet" href="/assets/surreal-7e479635cd562de45c09b8e15e1bb54f.css" integrity="sha256-EFy5TWNAtStIbHYa0XHjl6XgL9AHA2L7aeSlsHTlGiw= sha512-oRCKiHwjLx9VC7vUhNxUxiH4YEtrsN0lNCN7d3igG5FAsZ/YPLxYNEEa1g+CnUUBM3iRgrlqqygq1tIne5dlWg==" >
-
-		
-
-	</head>
-	<body>
-
-		<script type="x/boundary" id="fastboot-body-start"></script><!--%+b:0%--><!--%+b:1%--><!--%+b:2%--><!--%+b:3%--><!--%+b:4%--><!--%+b:5%-->
-	<!--%+b:6%--><!--%+b:7%--><!--% %--><!--%-b:7%-->
-
-<sidebar>
-
-	<div>
-		<i class="fas fa-times"></i>
-	</div>
-
-	<div>
-
-		<nav>
-
-			<div>
-
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211879" class="ember-view active" selected href="/">
-<!--%+b:11%-->			<!--%+b:12%-->Home<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211880" class="ember-view" href="/install">
-<!--%+b:11%-->			<!--%+b:12%-->Install<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211881" class="ember-view" href="/blog">
-<!--%+b:11%-->			<!--%+b:12%-->Blog<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-
-				<p>Product</p>
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211882" class="ember-view" href="/why">
-<!--%+b:11%-->			<!--%+b:12%-->Why SurrealDB?<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211883" class="ember-view" href="/features">
-<!--%+b:11%-->			<!--%+b:12%-->Features<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211884" class="ember-view" href="/releases">
-<!--%+b:11%-->			<!--%+b:12%-->Releases<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211885" class="ember-view" href="/roadmap">
-<!--%+b:11%-->			<!--%+b:12%-->Roadmap<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211886" class="ember-view" href="/docs">
-<!--%+b:11%-->			<!--%+b:12%-->Documentation<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-
-				<p>Community</p>
-				<!--%+b:7%--><!--%+b:8%-->	<!--%+b:9%--><!--%+b:10%--><a id="ember211887" class="ember-view" href="/community">
-<!--%+b:11%-->			<!--%+b:12%-->Community<!--%-b:12%-->
-<!--%-b:11%-->	</a><!--%-b:10%--><!--%-b:9%-->
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<a href="https://github.com/surrealdb/surrealdb" rel="noopener noreferrer" target="_blank">
-<!--%+b:9%-->			<!--%+b:10%-->GitHub<!--%-b:10%-->
-<!--%-b:9%-->	</a>
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<a href="https://www.linkedin.com/company/surrealdb/" rel="noopener noreferrer" target="_blank">
-<!--%+b:9%-->			<!--%+b:10%-->LinkedIn<!--%-b:10%-->
-<!--%-b:9%-->	</a>
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<a href="https://twitter.com/surrealdb" rel="noopener noreferrer" target="_blank">
-<!--%+b:9%-->			<!--%+b:10%-->Twitter<!--%-b:10%-->
-<!--%-b:9%-->	</a>
-<!--%-b:8%--><!--%-b:7%-->
-				<!--%+b:7%--><!--%+b:8%-->	<a href="https://www.youtube.com/channel/UCjf2teVEuYVvvVC-gFZNq6w" rel="noopener noreferrer" target="_blank">
-<!--%+b:9%-->			<!--%+b:10%-->YouTube<!--%-b:10%-->
-<!--%-b:9%-->	</a>
-<!--%-b:8%--><!--%-b:7%-->
-
-			</div>
-
-			<div>
-
-				<!--%+b:7%--><a button>
-	<div>
-<!--%+b:8%--><!--%+b:9%-->			Join cloud waitlist
-		<!--%-b:9%--><!--%-b:8%-->	</div>
-</a>
-
-<!--%+b:8%--><!----><!--%-b:8%--><!--%-b:7%-->
-
-			</div>
-
-		</nav>
-
-	</div>
-
-</sidebar><!--%-b:6%-->
-
-	<!--%+b:6%--><header>
-
-	<content route="index">
-
-		<div>
-			<!--%+b:7%--><!--%+b:8%--><a id="ember211888" class="ember-view active logo" href="/"></a><!--%-b:8%--><!--%-b:7%-->
-		</div>
-
-		<space></space>
-
-		<!--%+b:7%--><nav>
-
-			<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211889" class="ember-view active" selected href="/">
-<!--%+b:12%-->			<!--%+b:13%-->Home<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-
-			<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211890" class="ember-view" href="/install">
-<!--%+b:12%-->			<!--%+b:13%-->Install<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-
-			<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211891" class="ember-view" href="/community">
-<!--%+b:12%-->			<!--%+b:13%-->Community<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-
-			<!--%+b:8%--><div>
-
-	<span><!--%+b:9%-->Product<!--%-b:9%--></span>
-
-	<popup>
-		<menu>
-			<arrow></arrow>
-			<!--%|%-->
-				<main>
-					<!--%+b:9%--><!--%+b:10%-->	<!--%+b:11%--><!--%+b:12%--><a id="ember211892" class="ember-view" href="/why">
-		<div>
-			<!--%+b:13%--><icon>
-						<i class="fal fa-circle-question"></i>
-					</icon><!--%-b:13%-->
-			<!--%+b:13%--><span><!--%+b:14%-->Why SurrealDB?<!--%-b:14%--></span><!--%-b:13%-->
-		</div>
-		<!--%+b:13%--><p><!--%+b:14%-->Understand why SurrealDB is the ultimate cloud database.<!--%-b:14%--></p><!--%-b:13%-->
-	</a><!--%-b:12%--><!--%-b:11%-->
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<!--%+b:11%--><!--%+b:12%--><a id="ember211893" class="ember-view" href="/features">
-		<div>
-			<!--%+b:13%--><icon>
-						<i class="fal fa-list-check"></i>
-					</icon><!--%-b:13%-->
-			<!--%+b:13%--><span><!--%+b:14%-->Features<!--%-b:14%--></span><!--%-b:13%-->
-		</div>
-		<!--%+b:13%--><p><!--%+b:14%-->Get a detailed overview of all of SurrealDB's technical features.<!--%-b:14%--></p><!--%-b:13%-->
-	</a><!--%-b:12%--><!--%-b:11%-->
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<!--%+b:11%--><!--%+b:12%--><a id="ember211894" class="ember-view" href="/releases">
-		<div>
-			<!--%+b:13%--><icon>
-						<i class="fal fa-rocket-launch"></i>
-					</icon><!--%-b:13%-->
-			<!--%+b:13%--><span><!--%+b:14%-->Releases<!--%-b:14%--></span><!--%-b:13%-->
-		</div>
-		<!--%+b:13%--><p><!--%+b:14%-->Keep track of the notable updates and improvements for every SurrealDB product release in chronological order.<!--%-b:14%--></p><!--%-b:13%-->
-	</a><!--%-b:12%--><!--%-b:11%-->
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<!--%+b:11%--><!--%+b:12%--><a id="ember211895" class="ember-view" href="/roadmap">
-		<div>
-			<!--%+b:13%--><icon>
-						<i class="fal fa-road"></i>
-					</icon><!--%-b:13%-->
-			<!--%+b:13%--><span><!--%+b:14%-->Roadmap<!--%-b:14%--></span><!--%-b:13%-->
-		</div>
-		<!--%+b:13%--><p><!--%+b:14%-->See what we have planned for SurrealDB, and see the features and functionality which has already been implemented.<!--%-b:14%--></p><!--%-b:13%-->
-	</a><!--%-b:12%--><!--%-b:11%-->
-<!--%-b:10%--><!--%-b:9%-->
-				</main>
-				<subs>
-					<!--%+b:9%--><!--%+b:10%-->	<!--%+b:11%--><!--%+b:12%--><a id="ember211896" class="ember-view" href="/blog">
-		<div>
-			<!--%+b:13%--><icon>
-						<i class="fal fa-blog"></i>
-					</icon><!--%-b:13%-->
-			<!--%+b:13%--><span><!--%+b:14%-->Blog<!--%-b:14%--></span><!--%-b:13%-->
-		</div>
-		<!--%+b:13%--><!----><!--%-b:13%-->
-	</a><!--%-b:12%--><!--%-b:11%-->
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<a href="https://github.com/surrealdb/surrealdb" rel="noopener noreferrer" target="_blank">
-		<div>
-			<!--%+b:11%--><icon>
-						<i class="fab fa-github"></i>
-					</icon><!--%-b:11%-->
-			<!--%+b:11%--><span><!--%+b:12%-->GitHub<!--%-b:12%--></span><!--%-b:11%-->
-		</div>
-		<!--%+b:11%--><!----><!--%-b:11%-->
-	</a>
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<a href="https://twitter.com/surrealdb" rel="noopener noreferrer" target="_blank">
-		<div>
-			<!--%+b:11%--><icon>
-						<i class="fab fa-twitter"></i>
-					</icon><!--%-b:11%-->
-			<!--%+b:11%--><span><!--%+b:12%-->Twitter<!--%-b:12%--></span><!--%-b:11%-->
-		</div>
-		<!--%+b:11%--><!----><!--%-b:11%-->
-	</a>
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<a href="https://www.linkedin.com/company/surrealdb/" rel="noopener noreferrer" target="_blank">
-		<div>
-			<!--%+b:11%--><icon>
-						<i class="fab fa-linkedin"></i>
-					</icon><!--%-b:11%-->
-			<!--%+b:11%--><span><!--%+b:12%-->LinkedIn<!--%-b:12%--></span><!--%-b:11%-->
-		</div>
-		<!--%+b:11%--><!----><!--%-b:11%-->
-	</a>
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<a href="https://dev.to/surrealdb" rel="noopener noreferrer" target="_blank">
-		<div>
-			<!--%+b:11%--><icon>
-						<i class="fab fa-dev"></i>
-					</icon><!--%-b:11%-->
-			<!--%+b:11%--><span><!--%+b:12%-->Dev<!--%-b:12%--></span><!--%-b:11%-->
-		</div>
-		<!--%+b:11%--><!----><!--%-b:11%-->
-	</a>
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<a href="https://www.youtube.com/channel/UCjf2teVEuYVvvVC-gFZNq6w" rel="noopener noreferrer" target="_blank">
-		<div>
-			<!--%+b:11%--><icon>
-						<i class="fab fa-youtube"></i>
-					</icon><!--%-b:11%-->
-			<!--%+b:11%--><span><!--%+b:12%-->YouTube<!--%-b:12%--></span><!--%-b:11%-->
-		</div>
-		<!--%+b:11%--><!----><!--%-b:11%-->
-	</a>
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<a href="https://discord.gg/surrealdb" rel="noopener noreferrer" target="_blank">
-		<div>
-			<!--%+b:11%--><icon>
-						<i class="fab fa-discord"></i>
-					</icon><!--%-b:11%-->
-			<!--%+b:11%--><span><!--%+b:12%-->Discord<!--%-b:12%--></span><!--%-b:11%-->
-		</div>
-		<!--%+b:11%--><!----><!--%-b:11%-->
-	</a>
-<!--%-b:10%--><!--%-b:9%-->
-					<!--%+b:9%--><!--%+b:10%-->	<a href="https://stackoverflow.com/questions/tagged/surrealdb" rel="noopener noreferrer" target="_blank">
-		<div>
-			<!--%+b:11%--><icon>
-						<i class="fab fa-stack-overflow"></i>
-					</icon><!--%-b:11%-->
-			<!--%+b:11%--><span><!--%+b:12%-->Stack Overflow<!--%-b:12%--></span><!--%-b:11%-->
-		</div>
-		<!--%+b:11%--><!----><!--%-b:11%-->
-	</a>
-<!--%-b:10%--><!--%-b:9%-->
-				</subs>
-			<!--%|%-->
-		</menu>
-	</popup>
-
-</div><!--%-b:8%-->
-
-			<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211897" class="ember-view" href="/docs">
-<!--%+b:12%-->			<!--%+b:13%-->Docs<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-
-			<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211898" class="ember-view" href="/blog">
-<!--%+b:12%-->			<!--%+b:13%-->Blog<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-
-			<!--%+b:8%--><!--%+b:9%-->	<a href="https://github.com/surrealdb/surrealdb" rel="noopener noreferrer" target="_blank" button bordered thicker>
-		<div>
-<!--%+b:10%-->				<!--%|%-->
-				<i class="fa fa-star"></i> <span>Star us on GitHub</span>
-			<!--%|%-->
-<!--%-b:10%-->		</div>
-	</a>
-<!--%-b:9%--><!--%-b:8%-->
-
-			<!--%+b:8%--><a button>
-	<div>
-<!--%+b:9%--><!--%+b:10%-->			Join cloud waitlist
-		<!--%-b:10%--><!--%-b:9%-->	</div>
-</a>
-
-<!--%+b:9%--><!----><!--%-b:9%--><!--%-b:8%-->
-
-		</nav><!--%-b:7%-->
-
-		<!--%+b:7%--><sidebar-menu role="button">
-	<i class="fas fa-bars"></i>
-</sidebar-menu><!--%-b:7%-->
-
-	</content>
-
-</header><!--%-b:6%-->
-
-	<!--%+b:6%--><!--%+b:7%--><!--%+b:8%--><!--%+b:9%--><!----><!--%-b:9%--><!--%-b:8%-->
-
-<!--%+b:8%--><layout-hero>
-	<content route="index">
-		<!--%+b:9%--><!--%+b:10%--><surreal-logo>
-	<img src="/static/img/icon-1b3865ba0026de3b8308ecc3b5ef777d.png" alt="SurrealDB logo">
-</surreal-logo><!--%-b:10%--><!--%-b:9%-->
-		<!--%+b:9%--><!----><!--%-b:9%-->
-		<!--%+b:9%--><!----><!--%-b:9%-->
-		<!--%|%-->
-	<h1><img inline src="/static/img/text-be42529fe0e268f3fbabfb42065eeec7.svg" alt="SurrealDB"> is the <span gradient>ultimate</span> multi-model <span gradient>database</span> for tomorrow's applications</h1>
-	<h2><e>Develop easier.</e><e>Build faster.</e><e>Scale quicker.</e></h2>
-	<p>With an SQL-style query language, real-time queries with highly-efficient related data retrieval, advanced security permissions for multi-tenant access, and support for performant analytical workloads, SurrealDB is the next generation serverless database.</p>
-	<!--%+b:9%--><!--%+b:10%-->	<!--%+b:11%--><!--%+b:12%--><a id="ember211899" class="ember-view" button bordered thicker href="/install">
-		<div>
-<!--%+b:13%-->				<!--%|%-->
-		<i class="fas fa-download"></i> <span>Install</span>
-	<!--%|%-->
-<!--%-b:13%-->		</div>
-	</a><!--%-b:12%--><!--%-b:11%-->
-<!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%-->	<!--%+b:11%--><!--%+b:12%--><a id="ember211900" class="ember-view" button bordered thicker href="/docs">
-		<div>
-<!--%+b:13%-->				<!--%|%-->
-		<i class="fas fa-book-sparkles"></i> <span>Documentation</span>
-	<!--%|%-->
-<!--%-b:13%-->		</div>
-	</a><!--%-b:12%--><!--%-b:11%-->
-<!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><a button>
-	<div>
-<!--%+b:10%--><!--%+b:11%-->			Join cloud waitlist
-		<!--%-b:11%--><!--%-b:10%-->	</div>
-</a>
-
-<!--%+b:10%--><!----><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-hero><!--%-b:8%-->
-
-<!--%+b:8%--><layout-text>
-	<content route="index">
-		<!--%+b:9%--><!----><!--%-b:9%-->
-		<!--%+b:9%--><!----><!--%-b:9%-->
-		<!--%|%-->
- 	<h2>Why use <img inline src="/static/img/text-be42529fe0e268f3fbabfb42065eeec7.svg" alt="SurrealDB">?</h2>
-	<p>SurrealDB is an innovative NewSQL cloud database, suitable for serverless applications, jamstack applications, single-page applications, and traditional applications. It is unmatched in its versatility and financial value, with the ability for deployment on cloud, on-premise, embedded, and edge computing environments. For a hassle-free setup, get started with SurrealDB Cloud in one-click.</p>
-	<p>
-		<!--%+b:9%--><!--%+b:10%--><!--%+b:11%--><!--%+b:12%--><!--%+b:13%--><a id="ember211901" class="ember-view" button bordered thicker href="/usecase/jamstack"><!--%+b:14%-->
-			<div>
-				<span>Jamstack apps</span> <i class="fas fa-arrow-right"></i>
-			</div>
-		<!--%-b:14%--></a><!--%-b:13%--><!--%-b:12%--><!--%-b:11%--><!--%-b:10%--><!--%-b:9%-->
-		<!--%+b:9%--><!--%+b:10%--><!--%+b:11%--><!--%+b:12%--><!--%+b:13%--><a id="ember211902" class="ember-view" button bordered thicker href="/usecase/serverless"><!--%+b:14%-->
-			<div>
-				<span>Serverless apps</span> <i class="fas fa-arrow-right"></i>
-			</div>
-		<!--%-b:14%--></a><!--%-b:13%--><!--%-b:12%--><!--%-b:11%--><!--%-b:10%--><!--%-b:9%-->
-	</p>
-<!--%|%-->
-	</content>
-</layout-text><!--%-b:8%-->
-
-<!--%+b:8%--><gap mini></gap>
-<!--%-b:8%-->
-
-<!--%+b:8%--><layout-boxes cols-3-to-1>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><layout-boxes-item tick>
-
-<!--%+b:10%--><!----><!--%-b:10%-->
-<!--%+b:10%-->		<div>
-
-<!--%+b:11%--><!----><!--%-b:11%-->
-<!--%+b:11%-->				<h3>
-<!--%+b:12%-->						<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="20" height="20" alt>
-<!--%-b:12%-->					<!--%+b:12%-->Develop easier<!--%-b:12%-->
-				</h3>
-<!--%-b:11%-->
-<!--%+b:11%--><!----><!--%-b:11%-->
-<!--%+b:11%-->				<p><!--%+b:12%-->There is no need for your team to learn new complicated database languages. Getting started with SurrealDB is as simple as one command - and advanced functionality is simple to understand, whilst still being fast and performant.<!--%-b:12%--></p>
-<!--%-b:11%-->
-			<!--%|%-->
-
-		</div>
-<!--%-b:10%-->
-</layout-boxes-item><!--%-b:9%-->
-	<!--%+b:9%--><layout-boxes-item tick>
-
-<!--%+b:10%--><!----><!--%-b:10%-->
-<!--%+b:10%-->		<div>
-
-<!--%+b:11%--><!----><!--%-b:11%-->
-<!--%+b:11%-->				<h3>
-<!--%+b:12%-->						<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="20" height="20" alt>
-<!--%-b:12%-->					<!--%+b:12%-->Build faster<!--%-b:12%-->
-				</h3>
-<!--%-b:11%-->
-<!--%+b:11%--><!----><!--%-b:11%-->
-<!--%+b:11%-->				<p><!--%+b:12%-->SurrealDB simplifies your database and API stack, removing the need for most server-side components. As a web database, client-side applications can be built with direct connections to SurrealDB, while traditional server-side development techniques can still leverage the powerful but simple querying and analytics abilities.<!--%-b:12%--></p>
-<!--%-b:11%-->
-			<!--%|%-->
-
-		</div>
-<!--%-b:10%-->
-</layout-boxes-item><!--%-b:9%-->
-	<!--%+b:9%--><layout-boxes-item tick>
-
-<!--%+b:10%--><!----><!--%-b:10%-->
-<!--%+b:10%-->		<div>
-
-<!--%+b:11%--><!----><!--%-b:11%-->
-<!--%+b:11%-->				<h3>
-<!--%+b:12%-->						<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="20" height="20" alt>
-<!--%-b:12%-->					<!--%+b:12%-->Scale quicker<!--%-b:12%-->
-				</h3>
-<!--%-b:11%-->
-<!--%+b:11%--><!----><!--%-b:11%-->
-<!--%+b:11%-->				<p><!--%+b:12%-->Forget about scaling databases, servers, loadbalancers, and API endpoints. SurrealDB takes the hassle out of your stack, enabling you to grow and operate at scale with a highly-available, highly-scalable distributed platform. Deploy anywhere, or keep it simple with SurrealDB Cloud.<!--%-b:12%--></p>
-<!--%-b:11%-->
-			<!--%|%-->
-
-		</div>
-<!--%-b:10%-->
-</layout-boxes-item><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-boxes><!--%-b:8%-->
-
-<!--%+b:8%--><gap large></gap>
-<!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-l>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/database-api-security-30f3a965e4b86f9b9e24278a6835b41d.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Database, realtime API layer, and security permissions all-in-one</h3>
-		<p>SurrealDB combines the database layer, the querying layer, and the API and authentication layer into one platform. Advanced table-based and row-based customisable access permissions allow for granular data access patterns for different types of users. There's no need for custom backend code and security rules with complicated database development.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-r>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Tables, documents, and graph. Store and model your data in any way</h3>
-		<p>As a multi-model database, SurrealDB enables developers to use multiple techniques to store and model data, without having to choose a method in advance. With the use of tables, SurrealDB has similarities with relational databases, but with the added functionality and flexibility of advanced nested fields and arrays. Inter-document record links allow for simple to understand and highly-performant related queries without the use of JOINs, eliminating the N+1 query problem.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/multimodel-database-80c3f15beb93c28361af90b838238dd7.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-l>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/graph-database-c3cb6f8143e5d56a474b5b636dd52b94.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Advanced inter-document relations and analysis. No JOINs. No pain.</h3>
-		<p>With full graph database functionality, SurrealDB enables more advanced querying and analysis. Records (or vertices) can be connected to one another with edges, each with its own record properties and metadata. Simple extensions to traditional SQL queries allow for multi-table, multi-depth document retrieval, efficiently in the database, without the use of complicated JOINs and without bringing the data down to the client.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-r>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Simple schema definition for frontend and backend development</h3>
-		<p>With SurrealDB, specify your database and API schema in one place, and define column rules and constraints just once. Once a schema is defined, database access is automatically granted to the relevant users. No more custom API code, and no more GraphQL integration. Simple, flexible, and ready for production in minutes, not months.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/schema-direct-to-client-b62d646b4c624da630d3489f00c214d1.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-l>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/browser-sync-80af8f64d14ad325ef439e1f125604a4.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Connect and query directly from web-browsers and client devices</h3>
-		<p>Connect directly to SurrealDB from any end-user client device. Run SurrealQL queries directly within web-browsers, ensuring that users can only view or modify the data that they are allowed to access. Highly-performant WebSocket connections allow for efficient bi-directional queries, responses and notifications.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-r>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Query the database with the tools you want. Your data, your choice.</h3>
-		<p>SurrealDB is designed to be flexible to use, with support for SurrealQL, GraphQL (coming soon), CRUD support over REST, and JSON-RPC querying and modification over WebSockets. With direct-to-client connection with in-built permissions, SurrealDB speeds up the development process, and fits in seamlessly into any tech stack.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/multiple-integrations-00037b0e32441c612cd272105ef75b1c.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-l>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/realtime-live-queries-35311f790d6599f9b7f2b6968edc387b.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Realtime live queries and data changes direct to application</h3>
-		<p>SurrealDB keeps every client device in-sync with data modifications pushed in realtime to the clients, applications, end-user devices, and server-side libraries. Live SQL queries allow for advanced filtering of the changes to which a client subscribes, and efficient data formats, including DIFFing and PATCHing enable highly-performant web-based data syncing.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-r>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Scale effortlessly to hundreds of nodes for high-availability and scalability</h3>
-		<p>SurrealDB can be run as a single in-memory node, or as part of a distributed cluster - offering highly-available and highly-scalable system characteristics. Designed from the ground up to run in a distributed environment, SurrealDB makes use of special techniques when handling multi-table transactions, and document record IDs - with no use of table or row locks.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/scale-up-b019363d5b449895c37c89f8b8e12837.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-l>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/database-plugins-64c1b0dc2512d3eceecc5eea657e516e.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Extend your database with JavaScript and WebAssembly functions</h3>
-		<p>Embedded JavaScript functions allow for advanced, custom functionality, with computation logic being moved to the data layer. This improves upon the traditional approach of moving data to the client devices before applying any computation logic, ensuring that only the necessary data is transferred remotely. These advanced JavaScript functions, with support for the ES2020 standard, allow any developer to analyse the data in ever more simple-yet-advanced ways.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><layout-blocks main-r>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:9%--><!--%+b:10%--><div flex col middle>
-		<h3>Designed to be embedded or to run distributed in the cloud</h3>
-		<p>Built entirely in Rust as a single library, SurrealDB is designed to be used as both an embedded database library with advanced querying functionality, and as a database server which can operate in a distributed cluster. With low memory usage and cpu requirements, SurrealDB has been specifically designed to run in all types of environment.</p>
-	</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%+b:9%--><!--%+b:10%--><div>
-		<pic>
-			<img src="/static/img/illustrations/cloud-or-embedded-fdf2ee1800597055670fd9f80f84358a.png">
-		</pic>
-	</div><!--%-b:10%--><!--%-b:9%-->
-<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-<section>
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><layout-text>
-	<content route="index">
-		<!--%+b:9%--><!----><!--%-b:9%-->
-		<!--%+b:9%--><!----><!--%-b:9%-->
-		<!--%|%-->
-	 	<h2>A highly-scalable NewSQL database</h2>
-		<p>SurrealDB is a flexible, developer-friendly, fully ACID transactional, realtime document-graph web database for serverless applications. Never again worry about database provisioning, scaling, sharding, replication, or correctness.</p>
-	<!--%|%-->
-	</content>
-</layout-text><!--%-b:8%-->
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><layout-ticks>
-	<content route="index">
-		<!--%|%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Document &amp; graph database<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->JOIN-less deep fetching<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Distributed ACID transactions<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Built with Rust<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Structured and un-structured data<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->SQL-style querying<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->GraphQL and REST API<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Support for multi-tenant apps<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Multi-row, multi-table transactions<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Online and offline data sync<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->In-built access and permissions<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Multi-column and full-text indexes<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Incrementally computed views<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->Distributed and highly-scalable<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-		<!--%+b:9%--><layout-ticks-item>
-	<img src="/static/img/home/tick-a3e79715894a5e7d6793a1f38a424c44.svg" width="22" height="22" alt>
-	<!--%+b:10%--><p><!--%+b:11%-->No complex back-end servers and APIs<!--%-b:11%--></p><!--%-b:10%-->
-	<!--%|%-->
-</layout-ticks-item><!--%-b:9%-->
-	<!--%|%-->
-	</content>
-</layout-ticks><!--%-b:8%-->
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-</section>
-
-<section>
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><layout-blocks main-l>
-	<content route="index">
-		<!--%|%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<h3>Improved data modelling</h3>
-			<p>SurrealDB doesn't force you into setting up your data model in any one way. Instead you can choose between simple documents, documents with embedded fields, or related graph connections between records. Use schemafull or schemaless tables giving you the flexibility to store whatever you need.</p>
-			<p>Once stored in SurrealDB, all data is strongly typed, with the ability to convert between different types seamlessly - and numbers can be stored and computed with 64 bit precision or as arbitrary length decimals.</p>
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211903" class="ember-view" button bordered thicker href="/features">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211904" class="ember-view" button bordered thicker href="/install">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<!--%+b:11%-->	<!--%+b:12%--><pre class="language-surql"><!--%+b:13%--><code class="language-surql" min-h-300><!--%+b:14%--><!--%glmr%--><span class="token comment">-- Create a 'user' record</span>
-<span class="token keyword">CREATE</span> user <span class="token keyword">SET</span>
-	age <span class="token operator">=</span> <span class="token cast">&lt;int></span> <span class="token number">34</span><span class="token punctuation">,</span>
-	enabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-	<span class="token comment">-- Store the current time</span>
-	created_at <span class="token operator">=</span> <span class="token function">time::now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-	<span class="token comment">-- Specify embedded fields</span>
-	name<span class="token connector">.</span>first <span class="token operator">=</span> <span class="token string">"Tobie"</span><span class="token punctuation">,</span>
-	name<span class="token connector">.</span>last <span class="token operator">=</span> <span class="token string">"Morgan Hitchcock"</span><span class="token punctuation">,</span>
-	<span class="token comment">-- Add a field which is computed from other fields</span>
-	name<span class="token connector">.</span>full <span class="token operator">=</span> <span class="token cast">&lt;string></span> <span class="token function">string::join</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">,</span> name<span class="token connector">.</span>first<span class="token punctuation">,</span> name<span class="token connector">.</span>last<span class="token punctuation">)</span><span class="token punctuation">,</span>
-	<span class="token comment">-- Add an array whose values point to other remote records</span>
-	friends <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token record">user:gna732gnajan74hj</span><span class="token punctuation">,</span> <span class="token record">user:gna732gnajan74hj</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">;</span><!--%glmr%--><!--%-b:14%--></code><!--%-b:13%--></pre><!--%-b:12%-->
-<!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><layout-blocks main-r>
-	<content route="index">
-		<!--%|%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<!--%+b:11%-->	<!--%+b:12%--><pre class="language-surql"><!--%+b:13%--><code class="language-surql" min-h-300><!--%+b:14%--><!--%glmr%--><span class="token comment">-- Select all users and fetch the users' friends' names</span>
-<span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token punctuation">,</span> friends<span class="token connector">.</span><span class="token operator">*</span><span class="token connector">.</span>name<span class="token connector">.</span>full <span class="token keyword">AS</span> friends <span class="token keyword">FROM</span> user<span class="token punctuation">;</span>
-
-<span class="token comment">-- Set a variable to be used in subsequent statements</span>
-<span class="token keyword">LET</span> <span class="token variable">$tobie</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> user <span class="token keyword">WHERE</span> name<span class="token connector">.</span>first <span class="token operator">=</span> <span class="token string">"Tobie"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">-- Select all users with complex graph traversal</span>
-<span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token punctuation">,</span>
-	<span class="token comment">-- Select all users who like this user</span>
-	<span class="token operator">&lt;</span><span class="token operator">-</span>like<span class="token operator">&lt;</span><span class="token operator">-</span>user <span class="token keyword">AS</span> friends<span class="token punctuation">,</span>
-	<span class="token comment">-- Select all products which friends have purchased</span>
-	<span class="token operator">&lt;</span><span class="token operator">-</span>like<span class="token operator">&lt;</span><span class="token operator">-</span>user<span class="token operator">-</span><span class="token operator">></span>purchase<span class="token operator">-</span><span class="token operator">></span>product <span class="token keyword">AS</span> recommended
-	<span class="token comment">-- Only look at the single user selected above</span>
-	<span class="token keyword">FROM</span> <span class="token variable">$tobie</span>
-<span class="token punctuation">;</span><!--%glmr%--><!--%-b:14%--></code><!--%-b:13%--></pre><!--%-b:12%-->
-<!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<h3>Powerful querying abilities</h3>
-			<p>The primary method of querying SurrealDB is using SurrealQL, a similar but modified version of traditional SQL. SurrealQL enables linked documents to be traversed and queried efficiently, while still using an imperative language which remains understandable by data scientists.</p>
-			<p>With an innovative, but simple-to-understand, SQL language developers or data scientists can use a myriad of different techniques to store, query, and analyse the data in SurrealDB.</p>
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211905" class="ember-view" button bordered thicker href="/features">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211906" class="ember-view" button bordered thicker href="/install">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><layout-blocks main-l>
-	<content route="index">
-		<!--%|%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<h3>Simplified data analytics</h3>
-			<p>SurrealDB is designed to be quick to setup, and even quicker to implement. Multi-column indexes can be easily added and removed as your application evolves, allowing for strongly consistent reads and writes, and highly-performant reads.</p>
-			<p>Pre-computed table views allow superfast and highly-efficient aggregated data for queries which are known upfront - with simple view definition as easy as writing an SQL statement.</p>
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211907" class="ember-view" button bordered thicker href="/features">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211908" class="ember-view" button bordered thicker href="/install">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<!--%+b:11%-->	<!--%+b:12%--><pre class="language-surql"><!--%+b:13%--><code class="language-surql" min-h-300><!--%+b:14%--><!--%glmr%--><span class="token comment">-- Add a new 'user' record with some basic attributes</span>
-<span class="token keyword">CREATE</span> user <span class="token keyword">SET</span>
-	age <span class="token operator">=</span> <span class="token number">34</span><span class="token punctuation">,</span>
-	gender <span class="token operator">=</span> <span class="token string">'m'</span><span class="token punctuation">,</span>
-	name <span class="token operator">=</span> <span class="token string">'Tobie Morgan Hitchcock'</span>
-<span class="token punctuation">;</span>
-
-<span class="token comment">-- Define a table which aggregates data from another table</span>
-<span class="token keyword">DEFINE</span> <span class="token keyword">TABLE</span> users_by_gender
-	<span class="token keyword">AS</span>
-		<span class="token keyword">SELECT</span>
-			gender<span class="token punctuation">,</span>
-			<span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> total<span class="token punctuation">,</span>
-			<span class="token function">math::mean</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span> <span class="token keyword">AS</span> average_age
-		<span class="token keyword">FROM</span> user
-		<span class="token keyword">GROUP BY</span> gender
-<span class="token punctuation">;</span><!--%glmr%--><!--%-b:14%--></code><!--%-b:13%--></pre><!--%-b:12%-->
-<!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><layout-blocks main-r>
-	<content route="index">
-		<!--%|%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<!--%+b:11%-->	<!--%+b:12%--><pre class="language-surql"><!--%+b:13%--><code class="language-surql" min-h-300><!--%+b:14%--><!--%glmr%--><span class="token comment">-- Specify access permissions for the 'post' table</span>
-<span class="token keyword">DEFINE</span> <span class="token keyword">TABLE</span> post <span class="token keyword">SCHEMALESS</span>
-	<span class="token keyword">PERMISSIONS</span>
-		<span class="token keyword">FOR</span> select
-			<span class="token comment">-- Published posts can be selected</span>
-			<span class="token keyword">WHERE</span> published <span class="token operator">=</span> <span class="token boolean">true</span>
-			<span class="token comment">-- A user can select all their own posts</span>
-			<span class="token operator">OR</span> user <span class="token operator">=</span> <span class="token variable">$auth.id</span>
-		<span class="token keyword">FOR</span> create<span class="token punctuation">,</span> update
-			<span class="token comment">-- A user can create or update their own posts</span>
-			<span class="token keyword">WHERE</span> user <span class="token operator">=</span> <span class="token variable">$auth.id</span>
-		<span class="token keyword">FOR</span> delete
-			<span class="token comment">-- A user can delete their own posts</span>
-			<span class="token keyword">WHERE</span> user <span class="token operator">=</span> <span class="token variable">$auth.id</span>
-			<span class="token comment">-- Or an admin can delete any posts</span>
-			<span class="token operator">OR</span> <span class="token variable">$auth.admin</span> <span class="token operator">=</span> <span class="token boolean">true</span>
-<span class="token punctuation">;</span><!--%glmr%--><!--%-b:14%--></code><!--%-b:13%--></pre><!--%-b:12%-->
-<!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<h3>Faster app development times</h3>
-			<p>With permissions in-built from the ground up, SurrealDB is the perfect web-database for serverless applications. Easily specify permissions with easy-to-write SQL statements, ensuring that only the correct users can access the specified data that they have permission to select or modify.</p>
-			<p>With support for SSL/TLS, Single-Sign-On, external 3rd party authentication, JWT token based authentication, and custom business authentication logic - SurrealDB offers strong security, with the flexibility of custom authentication methods that suit your app or business.</p>
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211909" class="ember-view" button bordered thicker href="/features">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211910" class="ember-view" button bordered thicker href="/install">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><layout-blocks main-l>
-	<content route="index">
-		<!--%|%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<h3>Superpowered database functionality</h3>
-			<p>When connecting with SurrealDB, all connections are made using WebSockets, allowing for bi-directional data syncing. Dependent on data access permissions, client-based document subscriptions are triggered in real-time whenever changes are made to the data.</p>
-			<p>Data subscriptions can be specified for whole tables, filtered result sets, or individual records - enabling a multitude of different use-cases in all types of applications.</p>
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211911" class="ember-view" button bordered thicker href="/features">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-			<!--%+b:11%--><!--%+b:12%-->	<!--%+b:13%--><!--%+b:14%--><a id="ember211912" class="ember-view" button bordered thicker href="/install">
-		<div>
-<!--%+b:15%-->				<!--%|%-->
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			<!--%|%-->
-<!--%-b:15%-->		</div>
-	</a><!--%-b:14%--><!--%-b:13%-->
-<!--%-b:12%--><!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-		<!--%+b:9%--><!--%+b:10%--><div>
-			<!--%+b:11%-->	<!--%+b:12%--><pre class="language-surql"><!--%+b:13%--><code class="language-surql" min-h-300><!--%+b:14%--><!--%glmr%--><span class="token comment">-- Subscribe to all changes to documents which match</span>
-<span class="token keyword">LIVE</span> <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> document
-	<span class="token keyword">WHERE</span>
-		account <span class="token operator">=</span> <span class="token variable">$auth.account</span>
-		<span class="token operator">OR</span> public <span class="token operator">=</span> <span class="token boolean">true</span>
-<span class="token punctuation">;</span>
-
-<span class="token comment">-- Subscribe to all changes to a single 'post' record</span>
-<span class="token keyword">LIVE</span> <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> <span class="token record">post:c569rth77ad48tc6s3ig</span><span class="token punctuation">;</span>
-
-<span class="token comment">-- Stop receiving change notifications</span>
-<span class="token keyword">KILL</span> <span class="token string">"1986cc4e-340a-467d-9290-de81583267a2"</span><span class="token punctuation">;</span><!--%glmr%--><!--%-b:14%--></code><!--%-b:13%--></pre><!--%-b:12%-->
-<!--%-b:11%-->
-		</div><!--%-b:10%--><!--%-b:9%-->
-	<!--%|%-->
-	</content>
-</layout-blocks><!--%-b:8%-->
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-</section>
-
-<section>
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><layout-text>
-	<content route="index">
-		<!--%+b:9%--><!----><!--%-b:9%-->
-		<!--%+b:9%--><!----><!--%-b:9%-->
-		<!--%|%-->
-		<h2>Loved by developers</h2>
-	<!--%|%-->
-	</content>
-</layout-text><!--%-b:8%-->
-
-	<!--%+b:8%--><gap mini></gap>
-<!--%-b:8%-->
-
-	<!--%+b:8%--><!--%+b:9%--><layout-testimonials>
-	<content route="index">
-		<!--%|%-->
-	<!--%+b:10%--><app-masonry>
-	<app-masonry-view>
-		<app-masonry-area>
-<!--%+b:11%--><!--%+b:12%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://twitter.com/chrishayuk/status/1566350575373008898?s=20&amp;t=FyK0E3bPxzYl0L41DBO_1w" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/chrishay-527310a679c9d954f8ddf375832a2a23.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Chris Hay, CTO at IBM iX<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Sep 04<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->It's fast, small, can run on browser, edge and cloud.  It can handle large data.  It can run in-memory like redis or disk like sqlite and it can run multi-cluster.   It can sync between cloud and edge.  And to top of it off, it can also run as a graphdb. It's interesting.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://discord.com/channels/902568124350599239/902568124350599242/958055360059547739" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/zafaransari-058ffcf8ef4cdb401561563356902fdd.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Zafar Ansari<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->ansarizafar<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Mar 28<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->SurrealDB is like a dream database for every developer. The features set is too good to be true. Is it real???<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.reddit.com/r/rust/comments/wt3ygg/comment/il22sv7/?utm_source=share&amp;utm_medium=web2x&amp;context=3" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/julian6bG-cf296f2aebc8a3d8d5c517cd2b185d62.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->Julian6bG<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 20<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->Holy shit, I'm blown away! It looks beyond awesome. Can't wait to check it out tonight!<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.reddit.com/r/rust/comments/wt3ygg/comment/il2pyyg/?utm_source=share&amp;utm_medium=web2x&amp;context=3" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/greven-d519e6685b57f7f7c2abff4bf5ec2fb4.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->greven<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 20<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->This looks fantastic, congrats! This paired with Elixir Phoenix could be something else for real time. Need to try it out.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.reddit.com/r/rust/comments/wt3ygg/comment/il2af42/?utm_source=share&amp;utm_medium=web2x&amp;context=3" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/mugendee-11215fb41383024bc53c00759d447449.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->mugendee<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 20<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->This is amazing! I must say. Can't wait to play around with it.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://discord.com/channels/902568124350599239/970333598035112017/990273973793206292" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/juanmanuelverges-ba79c8bd63a823dc21e27689310ab3f5.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Juan Manuel Verges<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Jun 25<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->Researching the different repos out there, came to find this amazing project. I'm not sure how, but I want to get involved.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://mobile.twitter.com/_abdfnx" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/_abdfnx-e11166cf28d846992d0915a78315f76a.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->@_abdfnx<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Feb 22<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->I'm so exited about your version 1.0.0, keep up your awesome work.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://discord.com/channels/902568124350599239/970333598035112017/1003418467002744852" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/mariomonteiro-3b9bf1cb354a1c996bf0d7ae3686a9a9.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Mário Monteiro<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->koakh<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 01<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->I came across surrealdb today and it seems impressive, all the features in one solution like nosql, graphs, distributed, realtime, permissions, auth, rust and node driver, seem too good to be true. Now started playing with it 😀<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://dev.to/peteole/comment/212l2" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/olepeterson-0b2736ad835fd48bd3e97b82ce4f5ba7.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Ole Peterson<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->peteole<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 16<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->I was looking for something exactly like this for a long time! I have a feeling there was much too little going on in the database market for the last years and a rewrite from scratch that fixes the historical issues of sql seems like the right thing we need!<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/makeshiftindie-aa5d9c033e7ec255986ed7eafe9a6cb5.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Makeshift<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->makeshiftindie<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 05<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->love this idea. I wonder how to apply it to my next ETL project<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/ivanderbu2-34ac9ac0e75296655de8497458e2964c.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->ivanderbu2<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 05<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->Checked your QL it does look much simpler compared to Neo4j at least for inserting data. I've no doubt that there is a huge demand for solution like SurrealDB.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/pdyc-cef3f3f3a78fd7d62ec2825d2e5b0af3.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->pdyc<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 05<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->My weekend is ruined since i will be playing with surrealdb this weekend :-)<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/ghidra-c3ae95fbf2c4d1630deb319f3478c1a0.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->Ghidra<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 05<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->Very cool stuff for sure; it looks like a very interesting + useful product.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.linkedin.com/feed/update/urn:li:groupPost:4973032-6961346750498447360?commentUrn=urn%3Ali%3Acomment%3A%28groupPost%3A4973032-6961346750498447360%2C6961367160866676738%29" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/martingronlund-636cd836868c7cedff7bbd1fae09fac3.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Martin Grönlund<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 05<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->This looks like a wonderful piece of tech, similar to what I've had in mind for a while!<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.linkedin.com/feed/update/urn:li:activity:6961346751261802496/?commentUrn=urn%3Ali%3Acomment%3A(groupPost%3A4973032-6961346750498447360%2C6961676369349009408)" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/lukehamilton-c760b3df2e0d0d0a4622c06e2bf63463.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Luke Hamilton<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 09<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->Interesting, I am doing a poc now on using a graphDB for a project I'm planning. Been looking a lot at dgraph however I would prefer a rust based system due to our IoT requirements.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.linkedin.com/feed/update/urn:li:groupPost:4973032-6961346750498447360?commentUrn=urn%3Ali%3Acomment%3A%28groupPost%3A4973032-6961346750498447360%2C6961384432641392640%29" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/kamyarinlanloo-01f4eab44e34574e2580f4a7d75443ab.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Kamyar Inanloo<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 05<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->Wow! Well done! I am thinking about creating more high performance products in Rust but you did it!<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/mr_olafsson-b0f7727d7795203f7796474f97dc3591.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><!----><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->mr_olafsson<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 05<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->Wow that's hugely ambitious!! Your landing page looks amazing.<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%+b:13%-->				<!--%+b:14%--><app-masonry-item>
-<!--%+b:15%-->			<!--%+b:16%--><!--%+b:17%--><a href="https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG" rel="noopener noreferrer" target="_blank"><!--%+b:18%-->
-				<!--%+b:19%--><layout-testimonials-item hover>
-
-	<div>
-
-		<div>
-			<img src="/static/img/developers/jwalker-e14a781a4b3955f9a705bb373240f0f1.png">
-		</div>
-
-		<div>
-
-			<div>
-				<!--%+b:20%--><name><!--%+b:21%-->Justin Walker<!--%-b:21%--></name><!--%-b:20%-->
-				<!--%+b:20%--><user><!--%+b:21%-->jwalker<!--%-b:21%--></user><!--%-b:20%-->
-				<bull>•</bull>
-				<!--%+b:20%--><date><!--%+b:21%-->Aug 05<!--%-b:21%--></date><!--%-b:20%-->
-			</div>
-
-			<div>
-				<text><!--%+b:20%-->The site looks great and the docs are sooo clean... well done! I will definitely look into using this when I start on the dev work for my project!<!--%-b:20%--></text>
-			</div>
-
-		</div>
-
-	</div>
-
-</layout-testimonials-item><!--%-b:19%-->
-			<!--%-b:18%--></a><!--%-b:17%--><!--%-b:16%-->
-<!--%-b:15%-->	</app-masonry-item><!--%-b:14%-->
-<!--%-b:13%--><!--%-b:12%--><!--%-b:11%-->		</app-masonry-area>
-	</app-masonry-view>
-</app-masonry><!--%-b:10%-->
-<!--%|%-->
-	</content>
-</layout-testimonials><!--%-b:9%--><!--%-b:8%-->
-
-	<!--%+b:8%--><gap small></gap>
-<!--%-b:8%-->
-
-</section>
-
-<!--%+b:8%--><section>
-
-	<!--%+b:9%--><gap small></gap>
-<!--%-b:9%-->
-
-	<!--%+b:9%--><layout-text>
-	<content route="index">
-		<!--%+b:10%--><!----><!--%-b:10%-->
-		<!--%+b:10%--><!----><!--%-b:10%-->
-		<!--%|%-->
-	 	<h2>We are building <img inline src="/static/img/text-be42529fe0e268f3fbabfb42065eeec7.svg" alt="SurrealDB"> for everyone</h2>
-		<p>SurrealDB is being built in the open. We would love for you to be involved.</p>
-		<!--%+b:10%--><!--%+b:11%-->	<a href="https://github.com/surrealdb/surrealdb" rel="noopener noreferrer" target="_blank" button bordered thicker>
-		<div>
-<!--%+b:12%-->				<!--%|%-->
-			<i class="fa fa-star"></i> <span>Star us on GitHub</span>
-		<!--%|%-->
-<!--%-b:12%-->		</div>
-	</a>
-<!--%-b:11%--><!--%-b:10%-->
-		     
-		<!--%+b:10%--><!--%+b:11%-->	<!--%+b:12%--><!--%+b:13%--><a id="ember211913" class="ember-view" button bordered thicker href="/opensource">
-		<div>
-<!--%+b:14%-->				<!--%|%-->
-			<i class="fal fa-code"></i> <span>View our open source projects</span>
-		<!--%|%-->
-<!--%-b:14%-->		</div>
-	</a><!--%-b:13%--><!--%-b:12%-->
-<!--%-b:11%--><!--%-b:10%-->
-	<!--%|%-->
-	</content>
-</layout-text><!--%-b:9%-->
-
-	<!--%+b:9%--><gap small></gap>
-<!--%-b:9%-->
-
-</section><!--%-b:8%--><!--%-b:7%--><!--%-b:6%-->
-
-	<!--%+b:6%--><footer>
-	<content route="index">
-		<upper>
-			<div>
-				<!--%+b:7%--><!--%+b:8%--><a id="ember211914" class="ember-view active logo" href="/"></a><!--%-b:8%--><!--%-b:7%-->
-				<p>With an SQL-style query language, real-time queries with highly-efficient related data retrieval, advanced security permissions for multi-tenant access, and support for performant analytical workloads, SurrealDB is the next generation serverless database.</p>
-				<p>
-					<!--%+b:7%--><!--%+b:8%--><a href="https://github.com/surrealdb/surrealdb" rel="noopener noreferrer" target="_blank"><!--%+b:9%-->
-						<!--%+b:10%--><ignore></ignore>
-
-<!--%+b:11%--><!----><!--%-b:11%--><!--%-b:10%-->
-						<i class="fab fa-github"></i>
-					<!--%-b:9%--></a><!--%-b:8%--><!--%-b:7%-->
-					<!--%+b:7%--><!--%+b:8%--><a href="https://twitter.com/surrealdb" rel="noopener noreferrer" target="_blank"><!--%+b:9%-->
-						<!--%+b:10%--><ignore></ignore>
-
-<!--%+b:11%--><!----><!--%-b:11%--><!--%-b:10%-->
-						<i class="fab fa-twitter"></i>
-					<!--%-b:9%--></a><!--%-b:8%--><!--%-b:7%-->
-					<!--%+b:7%--><!--%+b:8%--><a href="https://www.linkedin.com/company/surrealdb/" rel="noopener noreferrer" target="_blank"><!--%+b:9%-->
-						<!--%+b:10%--><ignore></ignore>
-
-<!--%+b:11%--><!----><!--%-b:11%--><!--%-b:10%-->
-						<i class="fab fa-linkedin"></i>
-					<!--%-b:9%--></a><!--%-b:8%--><!--%-b:7%-->
-					<!--%+b:7%--><!--%+b:8%--><a href="https://www.youtube.com/channel/UCjf2teVEuYVvvVC-gFZNq6w" rel="noopener noreferrer" target="_blank"><!--%+b:9%-->
-						<!--%+b:10%--><ignore></ignore>
-
-<!--%+b:11%--><!----><!--%-b:11%--><!--%-b:10%-->
-						<i class="fab fa-youtube"></i>
-					<!--%-b:9%--></a><!--%-b:8%--><!--%-b:7%-->
-					<!--%+b:7%--><!--%+b:8%--><a href="https://discord.gg/surrealdb" rel="noopener noreferrer" target="_blank"><!--%+b:9%-->
-						<!--%+b:10%--><ignore></ignore>
-
-<!--%+b:11%--><!----><!--%-b:11%--><!--%-b:10%-->
-						<i class="fab fa-discord"></i>
-					<!--%-b:9%--></a><!--%-b:8%--><!--%-b:7%-->
-					<!--%+b:7%--><!--%+b:8%--><a href="https://dev.to/surrealdb" rel="noopener noreferrer" target="_blank"><!--%+b:9%-->
-						<!--%+b:10%--><ignore></ignore>
-
-<!--%+b:11%--><!----><!--%-b:11%--><!--%-b:10%-->
-						<i class="fab fa-dev"></i>
-					<!--%-b:9%--></a><!--%-b:8%--><!--%-b:7%-->
-					<!--%+b:7%--><!--%+b:8%--><a href="https://stackoverflow.com/questions/tagged/surrealdb" rel="noopener noreferrer" target="_blank"><!--%+b:9%-->
-						<!--%+b:10%--><ignore></ignore>
-
-<!--%+b:11%--><!----><!--%-b:11%--><!--%-b:10%-->
-						<i class="fab fa-stack-overflow"></i>
-					<!--%-b:9%--></a><!--%-b:8%--><!--%-b:7%-->
-					<!--%+b:7%--><!--%+b:8%--><a href="https://hub.docker.com/r/surrealdb/surrealdb" rel="noopener noreferrer" target="_blank"><!--%+b:9%-->
-						<!--%+b:10%--><ignore></ignore>
-
-<!--%+b:11%--><!----><!--%-b:11%--><!--%-b:10%-->
-						<i class="fab fa-docker"></i>
-					<!--%-b:9%--></a><!--%-b:8%--><!--%-b:7%-->
-				</p>
-			</div>
-		</upper>
-		<links>
-			<!--%+b:7%--><nav>
-				<!--%+b:8%--><p><!--%+b:9%-->Product<!--%-b:9%--></p><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211915" class="ember-view" href="/docs">
-<!--%+b:12%-->			<!--%+b:13%-->Documentation<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211916" class="ember-view" href="/why">
-<!--%+b:12%-->			<!--%+b:13%-->Why<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211917" class="ember-view" href="/install">
-<!--%+b:12%-->			<!--%+b:13%-->Install<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211918" class="ember-view" href="/features">
-<!--%+b:12%-->			<!--%+b:13%-->Features<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211919" class="ember-view" href="/releases">
-<!--%+b:12%-->			<!--%+b:13%-->Releases<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211920" class="ember-view" href="/roadmap">
-<!--%+b:12%-->			<!--%+b:13%-->Roadmap<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><a href="https://status.surrealdb.com" rel="noopener noreferrer" target="_blank">
-
-	<svg width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<circle cx="4" cy="4" r="4" fill="#00ff6e"></circle>
-	</svg>
-
-	 
-
-<!--%+b:9%-->		<!--%+b:10%-->Status<!--%-b:10%-->
-<!--%-b:9%-->
-</a><!--%-b:8%-->
-			</nav><!--%-b:7%-->
-			<!--%+b:7%--><nav>
-				<!--%+b:8%--><p><!--%+b:9%-->Community<!--%-b:9%--></p><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<a href="https://github.com/surrealdb/surrealdb" rel="noopener noreferrer" target="_blank">
-<!--%+b:10%-->			<!--%|%-->
-					<i class="fab fa-github"></i> <span>GitHub</span>
-				<!--%|%-->
-<!--%-b:10%-->	</a>
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<a href="https://twitter.com/surrealdb" rel="noopener noreferrer" target="_blank">
-<!--%+b:10%-->			<!--%|%-->
-					<i class="fab fa-twitter"></i> <span>Twitter</span>
-				<!--%|%-->
-<!--%-b:10%-->	</a>
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<a href="https://www.linkedin.com/company/surrealdb/" rel="noopener noreferrer" target="_blank">
-<!--%+b:10%-->			<!--%|%-->
-					<i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-				<!--%|%-->
-<!--%-b:10%-->	</a>
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<a href="https://www.youtube.com/channel/UCjf2teVEuYVvvVC-gFZNq6w" rel="noopener noreferrer" target="_blank">
-<!--%+b:10%-->			<!--%|%-->
-					<i class="fab fa-youtube"></i> <span>YouTube</span>
-				<!--%|%-->
-<!--%-b:10%-->	</a>
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<a href="https://discord.gg/surrealdb" rel="noopener noreferrer" target="_blank">
-<!--%+b:10%-->			<!--%|%-->
-					<i class="fab fa-discord"></i> <span>Discord</span>
-				<!--%|%-->
-<!--%-b:10%-->	</a>
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<a href="https://dev.to/surrealdb" rel="noopener noreferrer" target="_blank">
-<!--%+b:10%-->			<!--%|%-->
-					<i class="fab fa-dev"></i> <span>Dev</span>
-				<!--%|%-->
-<!--%-b:10%-->	</a>
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<a href="https://stackoverflow.com/questions/tagged/surrealdb" rel="noopener noreferrer" target="_blank">
-<!--%+b:10%-->			<!--%|%-->
-					<i class="fab fa-stack-overflow"></i> <span>Stack Overflow</span>
-				<!--%|%-->
-<!--%-b:10%-->	</a>
-<!--%-b:9%--><!--%-b:8%-->
-			</nav><!--%-b:7%-->
-			<!--%+b:7%--><nav>
-				<!--%+b:8%--><p><!--%+b:9%-->Legal<!--%-b:9%--></p><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211921" class="ember-view" href="/legal/privacy">
-<!--%+b:12%-->			<!--%+b:13%-->Privacy policy<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211922" class="ember-view" href="/legal/cookies">
-<!--%+b:12%-->			<!--%+b:13%-->Cookies policy<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211923" class="ember-view" href="/legal/security">
-<!--%+b:12%-->			<!--%+b:13%-->Security policy<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211924" class="ember-view" href="/license">
-<!--%+b:12%-->			<!--%+b:13%-->License FAQs<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<a href="/.well-known/security.txt" rel="noopener noreferrer" target="_blank">
-<!--%+b:10%-->			<!--%+b:11%-->security.txt<!--%-b:11%-->
-<!--%-b:10%-->	</a>
-<!--%-b:9%--><!--%-b:8%-->
-			</nav><!--%-b:7%-->
-			<!--%+b:7%--><nav>
-				<!--%+b:8%--><p><!--%+b:9%-->About<!--%-b:9%--></p><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211925" class="ember-view" href="/about">
-<!--%+b:12%-->			<!--%+b:13%-->About us<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211926" class="ember-view" href="/community">
-<!--%+b:12%-->			<!--%+b:13%-->Community<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211927" class="ember-view" href="/opensource">
-<!--%+b:12%-->			<!--%+b:13%-->Open source<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211928" class="ember-view" href="/blog">
-<!--%+b:12%-->			<!--%+b:13%-->Blog<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211929" class="ember-view" href="/media">
-<!--%+b:12%-->			<!--%+b:13%-->Media<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-				<!--%+b:8%--><!--%+b:9%-->	<!--%+b:10%--><!--%+b:11%--><a id="ember211930" class="ember-view" href="/store">
-<!--%+b:12%-->			<!--%+b:13%-->Store<!--%-b:13%-->
-<!--%-b:12%-->	</a><!--%-b:11%--><!--%-b:10%-->
-<!--%-b:9%--><!--%-b:8%-->
-			</nav><!--%-b:7%-->
-			<!--%+b:7%--><surreal-icon>
-	<img src="/static/img/home/logo@2x-1b3865ba0026de3b8308ecc3b5ef777d.png" alt="SurrealDB logo">
-</surreal-icon><!--%-b:7%-->
-		</links>
-		<lower>
-			<img src="/static/img/assets/poweredby/light-3e63a6e9ed8d0b6b9aecb2f5c12d4e9b.svg" alt="poweredby-surrealdb-light">
-			<p>
-				Copyright © SurrealDB Ltd.
-				<br>
-				Registered in England and Wales, no. 13615201
-				<br>
-				Registered address: Huckletree Oxford Circus, 213 Oxford Street, London, W1D 2LG
-				<br>
-			</p>
-		</lower>
-	</content>
-</footer><!--%-b:6%-->
-
-<!--%-b:5%--><!--%-b:4%--><!--%-b:3%--><!--%-b:2%--><!--%-b:1%--><!--%-b:0%--><script type="fastboot/shoebox" id="shoebox-surreal">{}</script><script type="x/boundary" id="fastboot-body-end"></script>
-
-		
-
-	</body>
+<!-- Last Published: Sat Apr 29 2023 21:43:48 GMT+0000 (Coordinated Universal Time) -->
+<html
+  data-wf-domain="www.makers.build"
+  data-wf-page="641e18654bb66481ca458659"
+  data-wf-site="641e18654bb664e4a54585f1"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>DiverEdU | The Future of education</title>
+    <meta
+      content="Our mission is to incubate the future leaders of the next 1000 startups in Latin America with a completely free program."
+      name="description"
+    />
+    <meta
+      content="Home | Empowering Young Talent in Latin America"
+      property="og:title"
+    />
+    <meta
+      content="Our mission is to incubate the future leaders of the next 1000 startups in Latin America with a completely free program."
+      property="og:description"
+    />
+    <meta content="https://i.ibb.co/Kr455B1/BRANDING.png" property="og:image" />
+    <meta
+      content="Home | Empowering Young Talent in Latin America"
+      property="twitter:title"
+    />
+    <meta
+      content="Our mission is to incubate the future leaders of the next 1000 startups in Latin America with a completely free program."
+      property="twitter:description"
+    />
+    <meta
+      content="https://i.ibb.co/Kr455B1/BRANDING.png"
+      property="twitter:image"
+    />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "Poppins:100,300italic,regular,italic,500,500italic,600,600italic,700,700italic",
+          ],
+        },
+      });
+    </script>
+    <!--[if lt IE 9
+      ]><script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+        type="text/javascript"
+      ></script
+    ><![endif]-->
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        (n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch");
+      })(window, document);
+    </script>
+    <link
+      href="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642c6a7f4ff6bf39a36659e0_Untitled.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642c6a82935f982a0aacc203_Untitled%20(1).png"
+      rel="apple-touch-icon"
+    />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TG2C4NQ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta
+      name="google-site-verification"
+      content="6I81jHgZ1a76vhOwDW8C6ntzXOgExb5LVmqN1sqtPko"
+    />
+    <script type="text/javascript">
+      window.__WEBFLOW_CURRENCY_SETTINGS = {
+        currencyCode: "USD",
+        $init: true,
+        symbol: "$",
+        decimal: ".",
+        fractionDigits: 2,
+        group: ",",
+        template:
+          '{{wf {"path":"symbol","type":"PlainText"} }} {{wf {"path":"amount","type":"CommercePrice"} }} {{wf {"path":"currencyCode","type":"PlainText"} }}',
+        hideDecimalForWholeNumbers: false,
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      data-animation="default"
+      data-collapse="medium"
+      data-duration="400"
+      data-easing="ease"
+      data-easing2="ease"
+      data-no-scroll="1"
+      role="banner"
+      class="navbar w-nav"
+    >
+      <div class="navbar-container w-container">
+        <div class="w-layout-grid navbar-grid">
+          <a
+            href="/"
+            id="w-node-da508061-90b3-a2be-084b-0625638de8db-638de8d8"
+            aria-current="page"
+            class="brand-navbar w-nav-brand w--current"
+            ><img
+              src="https://raw.githubusercontent.com/JairoProDev/Logo-DiverEdu/master/logo-blanco.png"
+              loading="lazy"
+              width="Auto"
+              height="Auto"
+              alt=""
+              class="brand-image-nav"
+          /></a>
+          <nav role="navigation" class="nav-menu w-nav-menu">
+            <a
+              href="/"
+              aria-current="page"
+              class="nav-link w-nav-link w--current"
+              >Home</a
+            >
+            <div
+              data-hover="false"
+              data-delay="0"
+              class="dropdown-nav w-dropdown"
+            >
+              <div class="dropdown-toggle-nav w-dropdown-toggle">
+                <div>Fellowships</div>
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb66471954586e9_chevron-down.svg"
+                  loading="lazy"
+                  alt=""
+                  class="dropdown-chevron-nav"
+                />
+              </div>
+              <nav class="dropdown-list-nav w-dropdown-list">
+                <div class="w-layout-grid drodpdown-grid-pages">
+                  <a
+                    id="w-node-da508061-90b3-a2be-084b-0625638de90b-638de8d8"
+                    href="/fellowships/founder"
+                    class="dropdown-link-pages w-inline-block"
+                    ><div class="dropdown-link">Founder Fellowship</div></a
+                  ><a
+                    id="w-node-da508061-90b3-a2be-084b-0625638de90f-638de8d8"
+                    href="/fellowships/coding"
+                    class="dropdown-link-pages w-inline-block"
+                    ><div class="dropdown-link">Coding Fellowship</div></a
+                  ><a
+                    id="w-node-da508061-90b3-a2be-084b-0625638de913-638de8d8"
+                    href="/fellowships/business"
+                    class="dropdown-link-pages w-inline-block"
+                    ><div class="dropdown-link">Business Fellowship</div></a
+                  >
+                </div>
+              </nav>
+            </div>
+            <a href="/talent" class="nav-link w-nav-link">Hire Talent</a>
+            <a href="/partnerships" class="nav-link w-nav-link">Partnerships</a>
+            <a href="/blog" class="nav-link w-nav-link">Blog</a>
+            <a href="/team" class="nav-link w-nav-link">Team</a>
+            <!-- <a
+              href="https://lu.ma/makers_fellowship"
+              class="nav-link w-nav-link"
+              >Events</a
+            > -->
+          </nav>
+          <div
+            id="w-node-_356d776c-2c02-4350-a8df-6ad0cf832682-638de8d8"
+            class="right-side-nav"
+          >
+            <a
+              id="w-node-da508061-90b3-a2be-084b-0625638de951-638de8d8"
+              href=""
+              class="nav-cta w-button"
+            >
+              Estudiar
+            </a>
+            <a
+              id="w-node-da508061-90b3-a2be-084b-0625638de951-638de8d8"
+              href=""
+              class="nav-cta w-button"
+              >Enseñar</a
+            >
+            <div class="menu-button w-nav-button">
+              <div class="hamburger-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb66405c345871f_menu-3-line.svg"
+                  loading="lazy"
+                  alt=""
+                  class="hamburger-icon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section hero-home-a wf-section">
+      <div class="main-container">
+        <div class="w-layout-grid grid-halves hero-grid-home-a">
+          <div
+            id="w-node-_04c99617-382e-5e7d-052b-f965a49e5f67-ca458659"
+            data-w-id="04c99617-382e-5e7d-052b-f965a49e5f67"
+            style="opacity: 0"
+            class="hero-a-content-wrap"
+          >
+            <h1 class="mega-h1 mega-h1-home-a">Donde el conocimiento</h1>
+            <div class="hero-a-path-wrap">
+              <h1 class="mega-h1">es</h1>
+              <h1 class="mega-h1">
+                <span class="span-accent-1">compartido</span>
+              </h1>
+            </div>
+            <div class="limit-480">
+              <p class="subtitle">
+                Aprende lo que sea a profundidad de forma personalizada, interactiva y entretenida.
+                <br>
+                 A tu propio ritmo: cuando, donde y con quien quieras.     
+              </p>
+            </div>
+            <div class="cta-wrap">
+              <a href="" class="cta w-button"
+                >Apply Now</a
+              >
+            </div>
+            <div class="limit-480-copy">
+              <p class="subtitle-copy">
+                
+              </p>
+            </div>
+          </div>
+          <div
+            id="w-node-_6ddaafa3-dc3d-e5e5-f996-62c237e775ca-ca458659"
+            data-w-id="6ddaafa3-dc3d-e5e5-f996-62c237e775ca"
+            style="opacity: 0"
+            class="marquee-wrap"
+          >
+            <div class="marquee-overlay"></div>
+            <div
+              style="
+                -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              class="marquee-column column-one"
+            >
+              <div class="marquee">
+                <div class="marquee-item">
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset="
+                      "
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                </div>
+                <div class="marquee-item">
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset="
+"
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                -webkit-transform: translate3d(0, -40%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, -40%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, -40%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, -40%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              class="marquee-column column-two"
+            >
+              <div class="marquee reverse">
+                <div class="marquee-item">
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset="
+                        -500.png 500w,
+                               500w
+                      "
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset="
+                        -500.png 500w,
+                               500w
+                      "
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                </div>
+                <div class="marquee-item">
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              class="marquee-column column-one"
+            >
+              <div class="marquee">
+                <div class="marquee-item">
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                </div>
+                <div class="marquee-item">
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                -webkit-transform: translate3d(0, -40%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, -40%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, -40%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, -40%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              class="marquee-column column-two"
+            >
+              <div class="marquee reverse">
+                <div class="marquee-item">
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      load="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                </div>
+                <div class="marquee-item">
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                  <div class="marquee-image-wrap">
+                    <img
+                      src=""
+                      loading="lazy"
+                      srcset=""
+                      sizes="(max-width: 479px) 100vw, (max-width: 991px) 195.1171875px, 250px"
+                      alt=""
+                      class="marquee-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="marquee-overlay bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-w-id="41d04aaf-83a4-93ec-b942-8696a8691318"
+      class="section world wf-section"
+    >
+      <div class="main-container">
+        <div
+          data-w-id="41d04aaf-83a4-93ec-b942-8696a869131a"
+          class="content-text-wrap"
+        >
+          <h1>
+            Nuestra misión es democratizar el acceso a mejores 
+            <span class="span-accent-1">oportunidades</span> a traves de la 
+            <span class="span-accent-1">Educación</span> con tecnología.
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div class="main-container">
+        <div
+          data-w-id="8f77a024-16aa-7783-2aeb-113b92493bb1"
+          class="title-wrap-small"
+        >
+          <h2 class="no-margins">We bring you top training</h2>
+          <div class="space-8"></div>
+          <p class="paragraph-big">
+            Learn from founders and operators backed by the best
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div
+        data-w-id="5687889f-56e6-f002-9d22-2aab40f83c3d"
+        class="feature-marquee-wrap"
+      >
+        <div
+          data-w-id="1e6929bb-3eaa-bd14-12af-2cd698f61539"
+          style="opacity: 0"
+          class="feature-marquee feature-row-one"
+        >
+          <div class="feature-marquee-item">
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210bf57e674a8672ed294c_6.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210bf57e674a8672ed294c_6-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210bf57e674a8672ed294c_6.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Fundraising <span class="span-accent-1">school</span> with
+                  Andrés.
+                </div>
+                <p>
+                  Get direct advice and feedback from Andrés Bilbao how to
+                  structure a fundraising strategy.
+                </p>
+              </div>
+            </div>
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c0030d27c35171f4973_5.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c0030d27c35171f4973_5-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c0030d27c35171f4973_5.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Founder <span class="span-accent-1">Mentality</span> with
+                  Borja.
+                </div>
+                <p>
+                  Learn from Borja, cofounder of Lemon Cash, how to change your
+                  mindset to scale your startup.
+                </p>
+              </div>
+            </div>
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c1664e7f4c6ea07d178_4.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c1664e7f4c6ea07d178_4-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c1664e7f4c6ea07d178_4.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Growth <span class="span-accent-1">Fundamentals</span> with
+                  Auke.
+                </div>
+                <p>
+                  Learn how Auke has helped startups like Crehana, Listopro and
+                  uDocz to scale.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-marquee-item">
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c237a77c6fdddbaf6cb_7.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c237a77c6fdddbaf6cb_7-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c237a77c6fdddbaf6cb_7.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Fireside <span class="span-accent-1">Chat</span> with Daniel
+                  Bilbao.
+                </div>
+                <p>
+                  Have an honest conversation in a prive meeting with Daniel
+                  Bilbao, CEO of Truora.
+                </p>
+              </div>
+            </div>
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c2e5d27292403706811_2.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 204.4765625px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c2e5d27292403706811_2-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c2e5d27292403706811_2.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Pitch <span class="span-accent-1">Roasting </span>with Enzo
+                  Cavalie.
+                </div>
+                <p>
+                  Receive direct feedback of your deck and pitch from Enzo
+                  Cavalie.
+                </p>
+              </div>
+            </div>
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb664b2484586ef_develop.webp"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb664b2484586ef_develop-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb664b2484586ef_develop.webp      580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Startup <span class="span-accent-1">Mentality</span> with Alex
+                  Gálvez.
+                </div>
+                <p>
+                  Sketching is the cheapest way to test your ideas, our
+                  designers will help you to sketch out the whole flowmap and
+                  early test before spending any more investment!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-w-id="c8583fc5-4681-0fe7-cf6a-c3668bd77c70"
+          style="opacity: 0"
+          class="feature-marquee reverse"
+        >
+          <div class="feature-marquee-item">
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c365d2729036f706832_10.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c365d2729036f706832_10-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c365d2729036f706832_10.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Problem <span class="span-accent-1">solving</span> with
+                  McKinsey.
+                </div>
+                <p>
+                  Learn how the top consultants at McKinsey are solving problems
+                  with training from them.
+                </p>
+              </div>
+            </div>
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c3f7894bfacf8359ce1_9.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c3f7894bfacf8359ce1_9-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c3f7894bfacf8359ce1_9.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Launch your own <span class="span-accent-1">dApp</span>.
+                </div>
+                <p>
+                  Learn how to start and launch your own dApp in less than one
+                  hour with Camila, cofounder of Makers.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-marquee-item">
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c51885ad949d718d8a4_1.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c51885ad949d718d8a4_1-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210c51885ad949d718d8a4_1.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  How <span class="span-accent-1">VC thinks</span> with
+                  Fernando.
+                </div>
+                <p>
+                  Listen from Fernando Rivera from BuenTrip the do&#x27;s and
+                  dont&#x27;s when talking to a VC.
+                </p>
+              </div>
+            </div>
+            <div class="feature-marquee-card">
+              <div class="feature-image-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64407ae588ab382a21e57ccf_169%20Video.png"
+                  loading="lazy"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, (max-width: 991px) 200px, 290px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64407ae588ab382a21e57ccf_169%20Video-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64407ae588ab382a21e57ccf_169%20Video.png       580w
+                  "
+                  alt=""
+                  class="image-cover"
+                />
+              </div>
+              <div class="feature-content-wrap">
+                <div class="feature-overview-title">
+                  Believing in <span class="span-accent-1">young</span> talent.
+                </div>
+                <p>
+                  Danielle Strachman was the cofounder of Thiel Fellowship, and
+                  she saw the beginning of Ethereum, Figma, OYO, etc. She shares
+                  with us her experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div class="main-container">
+        <div class="w-layout-grid grid-halves pricing-more">
+          <div
+            data-w-id="5ca384d3-d146-e9d6-01fc-383b8637a7be"
+            style="opacity: 0"
+            class="pricing-feature-content"
+          >
+            <h2>
+              <span class="span-accent-1">We&#x27;re creating</span> the program
+              that young entrepreneurs wished they had earlier.
+            </h2>
+            <p class="paragraph-big">
+              Startups are not for everyone, but everyone should have the
+              opportunity to know that this world exist. <br /><br />Many
+              learned the hard way from the lonely path, making plenty of
+              mistakes, but this shouldn&#x27;t be the case for you.<br />
+            </p>
+            <a href="https://jobs.lever.co/makers" class="cta-copy w-button"
+              >Apply Now</a
+            >
+          </div>
+          <div
+            id="w-node-_5ca384d3-d146-e9d6-01fc-383b8637a7c5-ca458659"
+            class="feature-wrap"
+          >
+            <div
+              id="w-node-_5ca384d3-d146-e9d6-01fc-383b8637a7c6-ca458659"
+              data-w-id="5ca384d3-d146-e9d6-01fc-383b8637a7c6"
+              style="opacity: 0"
+              class="feature-card gray"
+            >
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421dffc89f915e09facb207_money_with_wings.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <h3>No fees</h3>
+              <p class="paragraph-big">
+                The program is completely free. You will never have to pay for
+                anything.
+              </p>
+            </div>
+            <div
+              id="w-node-_5ca384d3-d146-e9d6-01fc-383b8637a7cd-ca458659"
+              data-w-id="5ca384d3-d146-e9d6-01fc-383b8637a7cd"
+              style="opacity: 0"
+              class="feature-card gray"
+            >
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421e0042e6b5b61d0b14d9c_earth_americas.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <h3>For Latin America</h3>
+              <p class="paragraph-big">
+                We want to make a positive impact in LATAM, That&#x27;s why
+                we&#x27;re dedicated to serving the entire region, from Mexico
+                to Brazil.
+              </p>
+            </div>
+            <div
+              id="w-node-_5ca384d3-d146-e9d6-01fc-383b8637a7d4-ca458659"
+              data-w-id="5ca384d3-d146-e9d6-01fc-383b8637a7d4"
+              style="opacity: 0"
+              class="feature-card gray"
+            >
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421e00aa52f92430176b428_unicorn_face.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <h3>For young people</h3>
+              <p class="paragraph-big">
+                We want to make a positive impact in LATAM, That&#x27;s why
+                we&#x27;re dedicated to serving the entire region, from Mexico
+                to Brazil.
+              </p>
+            </div>
+            <div
+              id="w-node-_5ca384d3-d146-e9d6-01fc-383b8637a7db-ca458659"
+              data-w-id="5ca384d3-d146-e9d6-01fc-383b8637a7db"
+              style="opacity: 0"
+              class="feature-card gray"
+            >
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421e015d0f3a69b118b70f5_globe_with_meridians.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <h3>Top network</h3>
+              <p class="paragraph-big">
+                Accelerate your knowledge, build an amazing community, and
+                access a network of mentors and startups that will help you
+                become a future tech leader
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div class="main-container">
+        <div
+          data-w-id="b93d046c-1827-859a-e412-6edf3b909532"
+          style="opacity: 0"
+          class="title-wrap-big"
+        >
+          <img
+            src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64210f577894bfd49835c743_1231.png"
+            loading="lazy"
+            width="100"
+            height="100"
+            data-w-id="b93d046c-1827-859a-e412-6edf3b909533"
+            style="opacity: 0"
+            alt=""
+            class="symbol-small"
+          />
+          <h2 class="no-margins">
+            We&#x27;re <span class="span-accent-1">empowering</span> all type of
+            young talent<span class="span-accent-1"></span>
+          </h2>
+          <p class="paragraph-big">
+            No matter what your background is, you will be able to surround
+            yourself with amazing people.
+          </p>
+        </div>
+        <div class="space-40"></div>
+        <div
+          data-w-id="b93d046c-1827-859a-e412-6edf3b90953e"
+          style="opacity: 0"
+          data-current="Tab 2"
+          data-easing="ease"
+          data-duration-in="300"
+          data-duration-out="100"
+          class="tabs w-tabs"
+        >
+          <div class="tabs-menu w-tab-menu">
+            <a data-w-tab="Tab 1" class="tab-link w-inline-block w-tab-link"
+              ><div>Founder</div></a
+            ><a
+              data-w-tab="Tab 2"
+              class="tab-link w-inline-block w-tab-link w--current"
+              ><div>Coding</div></a
+            ><a data-w-tab="Tab 3" class="tab-link w-inline-block w-tab-link"
+              ><div>Business</div></a
+            >
+          </div>
+          <div class="tabs-content w-tab-content">
+            <div data-w-tab="Tab 1" class="tab-pane w-tab-pane">
+              <a
+                href="/fellowships/founder"
+                class="tab-block startup-tab w-inline-block"
+                ><h1 class="tab-title">Founder Fellow</h1>
+                <p class="paragraph-big">
+                  Develop the skills and knowledge you need to overcome common
+                  startup challenges and build a sustainable and successful
+                  business.
+                </p>
+                <div class="tile-cursor">
+                  <div class="tab-tile-cursor-circle"><div>Read more</div></div>
+                </div></a
+              >
+            </div>
+            <div data-w-tab="Tab 2" class="tab-pane w-tab-pane w--tab-active">
+              <a
+                href="/fellowships/coding"
+                class="tab-block sme-tab w-inline-block"
+                ><h1 class="tab-title">Coding Fellow</h1>
+                <p class="paragraph-big">
+                  Access to cutting-edge technologies and tools to help you stay
+                  up-to-date with the latest trends and innovations in the
+                  coding world.
+                </p>
+                <div class="tile-cursor">
+                  <div class="tab-tile-cursor-circle"><div>Read more</div></div>
+                </div></a
+              >
+            </div>
+            <div data-w-tab="Tab 3" class="tab-pane w-tab-pane">
+              <a
+                href="/fellowships/business"
+                class="tab-block enterprise-tab w-inline-block"
+                ><h1 class="tab-title">Business Fellow</h1>
+                <p class="paragraph-big">
+                  Accelerate your personal and professional growth through
+                  hands-on learning, practical workshops, and customized
+                  coaching designed to help you achieve your business goals.
+                </p>
+                <div class="tile-cursor">
+                  <div class="tab-tile-cursor-circle"><div>Read more</div></div>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section dark wf-section">
+      <div class="main-container">
+        <div class="w-layout-grid grid-halves">
+          <div
+            id="w-node-ca413d0b-8f8d-2f12-a1d3-1faa59ba8e96-ca458659"
+            class="sticky-wrap"
+          >
+            <div
+              data-w-id="ca413d0b-8f8d-2f12-a1d3-1faa59ba8e97"
+              style="opacity: 0"
+              class="sticky-block page-with-subnav"
+            >
+              <h2>Selection process</h2>
+              <div class="space-16"></div>
+              <p class="paragraph-big">
+                We run an intensive process to select the best talent from the
+                region, no matter what their background is.<br /><br />We accept
+                applicants on a rolling-basis during the time the applications
+                are open (April 10th to May 28th).
+              </p>
+            </div>
+          </div>
+          <div
+            id="w-node-ca413d0b-8f8d-2f12-a1d3-1faa59ba8e9d-ca458659"
+            class="stick-content-wrap"
+          >
+            <div class="sticky-feature-card">
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6423a39d98e25fe111304a1e_unlock.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <div class="feature-content">
+                <h3>Applications are open</h3>
+                <p class="no-margins">
+                  Applications for Makers Fellowship Cohort 3 will open on
+                  April, 10th, 2023.
+                </p>
+              </div>
+            </div>
+            <div class="sticky-feature-card">
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64346f354af44925576b59b3_video_camera.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <div class="feature-content">
+                <h3>First phase: Video</h3>
+                <p class="no-margins">
+                  You will send us a video explaining why you want to be part of
+                  Makers and talk about you and your aspirations.
+                </p>
+              </div>
+            </div>
+            <div class="sticky-feature-card">
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64227e04b583db6e39b2efd3_brain.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <div class="feature-content">
+                <h3>
+                  Second phase: Business Case, Coding Exercise, Startup Pitch
+                  &amp; Reference Checks
+                </h3>
+                <p class="no-margins">
+                  You will have to solve a problem to verify your hard skills,
+                  either in business or in coding. Besides that, we will run a
+                  reference check.
+                </p>
+              </div>
+            </div>
+            <div class="sticky-feature-card">
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64346f51d540a038f6bc4eef_speaking_head_in_silhouette.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <div class="feature-content">
+                <h3>Third phase: Interviews</h3>
+                <p class="no-margins">
+                  If your application looks promising, you will have 2 to 3 more
+                  interview with different members of the Makers Team. This
+                  helps us to verify the program is a fit for you.
+                </p>
+              </div>
+            </div>
+            <div class="sticky-feature-card">
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6423a40d11e0cd0692e3becc_closed_lock_with_key.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <div class="feature-content">
+                <h3>Applications closed</h3>
+                <p class="no-margins">
+                  On May 28th 2023 applications will be closed. Any application
+                  after this date will be considered for the next cohort.
+                </p>
+              </div>
+            </div>
+            <div class="sticky-feature-card">
+              <div class="feature-icon-wrap">
+                <img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6423a4256d535c24613e99b2_rocket.png"
+                  loading="lazy"
+                  alt=""
+                  class="feature-icon"
+                />
+              </div>
+              <div class="feature-content">
+                <h3>Fellowship onboarding</h3>
+                <p class="no-margins">
+                  On June 15th 2023 we will being the 3-month program with all
+                  the selected fellows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section wf-section">
+      <div class="main-container w-container">
+        <div class="title-wrap">
+          <h2 data-w-id="b2bff84c-c50e-11b8-4f13-08a71010fbe8">
+            How does a cohort of <span class="span-accent-1">makers</span> looks
+            like?
+          </h2>
+        </div>
+        <div class="space-40"></div>
+        <div
+          data-w-id="b2bff84c-c50e-11b8-4f13-08a71010fbee"
+          class="roadmap-master"
+        >
+          <div class="roadmap-sticky">
+            <div class="roadmap-background">
+              <div class="roadmap-background-grid">
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbf2-1010fbe5"
+                  class="week-text"
+                >
+                  Month 1
+                </div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbf4-1010fbe5"
+                  class="roadmap-background-divider"
+                ></div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbf5-1010fbe5"
+                  class="week-text"
+                >
+                  Month 1
+                </div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbf7-1010fbe5"
+                  class="roadmap-background-divider"
+                ></div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbf8-1010fbe5"
+                  class="week-text"
+                >
+                  Month 2
+                </div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbfa-1010fbe5"
+                  class="roadmap-background-divider"
+                ></div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbfb-1010fbe5"
+                  class="week-text"
+                >
+                  Month 2
+                </div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbfd-1010fbe5"
+                  class="roadmap-background-divider"
+                ></div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fbfe-1010fbe5"
+                  class="week-text"
+                >
+                  Month 3
+                </div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fc00-1010fbe5"
+                  class="roadmap-background-divider"
+                ></div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fc01-1010fbe5"
+                  class="week-text"
+                >
+                  Month 3
+                </div>
+              </div>
+              <div class="roadmap-foreground">
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fc04-1010fbe5"
+                  class="roadmap-stage-master ideation"
+                >
+                  <div class="stage-name">The Foundations</div>
+                  <div class="roadmap-fill-overflow">
+                    <div class="roadmap-stage-fill ideation-fill"></div>
+                  </div>
+                  <div class="roadmap-info-tile ideation-tile">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb6646c884586fd_IconIdeation.svg"
+                      loading="lazy"
+                      alt=""
+                      class="roadmap-icons"
+                    />
+                    <div>The Foundations</div>
+                    <p class="roadmap-paragraph">
+                      You will get initial training to become a great founder,
+                      coding or business fellow.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fc0f-1010fbe5"
+                  class="roadmap-stage-master design"
+                >
+                  <div class="stage-name">Create your support Network</div>
+                  <div class="roadmap-fill-overflow">
+                    <div class="roadmap-stage-fill design-fill"></div>
+                  </div>
+                  <div class="roadmap-info-tile design-tile">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb6641da94586fc_IconBranding.svg"
+                      loading="lazy"
+                      alt=""
+                      class="roadmap-icons"
+                    />
+                    <div>Create your support Network</div>
+                    <p class="roadmap-paragraph">
+                      A big part of the success in your journey as founder or
+                      operator is surrounding yourself with amazing people. We
+                      will help you on this.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fc1a-1010fbe5"
+                  class="roadmap-stage-master develop"
+                >
+                  <div class="stage-name">
+                    Accelerate your career or startup
+                  </div>
+                  <div class="roadmap-fill-overflow">
+                    <div class="roadmap-stage-fill develop-fill"></div>
+                  </div>
+                  <div class="roadmap-info-tile development-tile">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb66432184586fe_IconDev.svg"
+                      loading="lazy"
+                      alt=""
+                      class="roadmap-icons"
+                    />
+                    <div>Accelerate your career or startup</div>
+                    <p class="roadmap-paragraph">
+                      Once you have all the foundations, you&#x27;re ready to
+                      start accelerating your journey.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  id="w-node-b2bff84c-c50e-11b8-4f13-08a71010fc25-1010fbe5"
+                  class="roadmap-stage-master test"
+                >
+                  <div class="stage-name">Becoming a maker</div>
+                  <div class="roadmap-fill-overflow">
+                    <div class="roadmap-stage-fill test-fill"></div>
+                  </div>
+                  <div class="roadmap-info-tile test-tile">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb66455454586ff_IconTesst.svg"
+                      loading="lazy"
+                      alt=""
+                      class="roadmap-icons"
+                    />
+                    <div>Once a maker, always a maker</div>
+                    <p class="roadmap-paragraph">
+                      At the end of the program, you will receive guidance on
+                      how to be in touch of the community to be supported even
+                      after the program ends.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section dark wf-section">
+      <div class="main-container">
+        <div class="w-layout-grid marketing-grid reverse">
+          <div
+            data-w-id="fb95a92f-d900-637c-b0ee-814e2d46db05"
+            class="marketing-logos-wrap"
+          >
+            <div class="marketing-logos-wrap">
+              <div class="marketing-column first-column">
+                <div
+                  id="w-node-_8b25daa6-1e17-75cd-e0e1-e8e047321474-2d46db03"
+                  class="marketing-icons-combo"
+                >
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642207a6dc83537d28da44f0_sumerlabs.png"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220797958e70369945d1f9_Ontop_Instagram-Profile.jpeg"
+                      loading="lazy"
+                      sizes="(max-width: 479px) 100vw, 64px"
+                      srcset="
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220797958e70369945d1f9_Ontop_Instagram-Profile-p-500.jpeg   500w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220797958e70369945d1f9_Ontop_Instagram-Profile-p-800.jpeg   800w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220797958e70369945d1f9_Ontop_Instagram-Profile-p-1080.jpeg 1080w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220797958e70369945d1f9_Ontop_Instagram-Profile-p-1600.jpeg 1600w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220797958e70369945d1f9_Ontop_Instagram-Profile.jpeg        2000w
+                      "
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6422075730c3f084f12f57a8_1673801494044.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220744c5f102661835203c_1654016773317.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2ea8dff64ae045ee89b_Bullground1662742173227_cjfb6a.jpeg"
+                      loading="lazy"
+                      sizes="(max-width: 479px) 100vw, 64px"
+                      srcset="
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2ea8dff64ae045ee89b_Bullground1662742173227_cjfb6a-p-500.jpeg 500w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2ea8dff64ae045ee89b_Bullground1662742173227_cjfb6a.jpeg       713w
+                      "
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f0ce5c42db1efb5b71a0_1669109557424.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                </div>
+                <div class="marketing-icons-combo">
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f0e9c8751e69f472711a_Strade_Isotipo-01.webp"
+                      loading="lazy"
+                      sizes="(max-width: 479px) 100vw, 64px"
+                      srcset="
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f0e9c8751e69f472711a_Strade_Isotipo-01-p-500.webp  500w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f0e9c8751e69f472711a_Strade_Isotipo-01-p-800.webp  800w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f0e9c8751e69f472711a_Strade_Isotipo-01.webp       1043w
+                      "
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f32434c9318110014793_1648073121230.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6422080a98fb6a022b855175_aptuno_logo.png"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642208168dff647a5e6079e5_download%20(2).png"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220821e1d680102ff787cb_1605796263555.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6422082c2192983193e29257_f0LKHOyQ_400x400.png"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="marketing-column mid-column">
+                <div class="marketing-icons-combo">
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6422071fc61c69c59fc5c3a7_1672327392266.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220715ecc951a36a24130f_1678116196857.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/64220709223897094793527e_download.png"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642206fd30c3f0c05d2f5149_1660620105647.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f236e4a443a70b16013f_636cfb3d47acd73bce20b32a_hype_logo_full.svg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f06f30c3f0848e2ddeee_MEDU-Stand-F-500.webp"
+                      loading="lazy"
+                      sizes="(max-width: 479px) 100vw, 64px"
+                      srcset="
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f06f30c3f0848e2ddeee_MEDU-Stand-F-500-p-500.webp   500w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f06f30c3f0848e2ddeee_MEDU-Stand-F-500-p-800.webp   800w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f06f30c3f0848e2ddeee_MEDU-Stand-F-500-p-1080.webp 1080w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f06f30c3f0848e2ddeee_MEDU-Stand-F-500-p-1600.webp 1600w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f06f30c3f0848e2ddeee_MEDU-Stand-F-500.webp        3000w
+                      "
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                </div>
+                <div class="marketing-icons-combo">
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421eeb88d4c8064a1fb3bb6_download.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f25f800373bef9b51786_1658938112363.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642204ecc3c0731fe3acf8d7_1625755132900.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642204fac3c073c68cacf906_1625511753534.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6422050798fb6a374785245a_1658264097484.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642206e6a34209ca63e89de9_1652976794762.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="marketing-column last-column">
+                <div class="marketing-icons-combo">
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2b04e81fc388e4605af_image03.png"
+                      loading="lazy"
+                      sizes="(max-width: 479px) 100vw, 64px"
+                      srcset="
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2b04e81fc388e4605af_image03-p-500.png   500w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2b04e81fc388e4605af_image03-p-800.png   800w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2b04e81fc388e4605af_image03-p-1080.png 1080w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2b04e81fc388e4605af_image03-p-1600.png 1600w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2b04e81fc388e4605af_image03.png        1740w
+                      "
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f28e8560a91c1f5d590a_1676509403582.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f236e4a443a70b16013f_636cfb3d47acd73bce20b32a_hype_logo_full.svg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f1f995dda271e67b5b3c_m8Yk7scZ_400x400.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f1d89e6226527afceb11_1659543022844.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f0a68dff6411815e8f8b_1671034604269.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                </div>
+                <div class="marketing-icons-combo">
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f08c2b8d280edc8ec849_1658767391472.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f19721929835eae0f7b2_1635844525313.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f32434c9318110014793_1648073121230.jpeg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2ea8dff64ae045ee89b_Bullground1662742173227_cjfb6a.jpeg"
+                      loading="lazy"
+                      sizes="(max-width: 479px) 100vw, 64px"
+                      srcset="
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2ea8dff64ae045ee89b_Bullground1662742173227_cjfb6a-p-500.jpeg 500w,
+                        https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/6421f2ea8dff64ae045ee89b_Bullground1662742173227_cjfb6a.jpeg       713w
+                      "
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb6641619458655_Logo%20Vue.svg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                  <div class="marketing-logo-wrap">
+                    <img
+                      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641e18654bb664af31458650_Logo%20React.svg"
+                      loading="lazy"
+                      alt=""
+                      class="marketing-logo-image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="marketing-gradient"></div>
+              <div class="marketing-gradient bottom-gradient"></div>
+            </div>
+          </div>
+          <div
+            id="w-node-fb95a92f-d900-637c-b0ee-814e2d46db07-2d46db03"
+            data-w-id="fb95a92f-d900-637c-b0ee-814e2d46db07"
+            class="marketing-content"
+          >
+            <h2>
+              Build alongside a
+              <span class="span-accent-1">community</span> mentored by top
+              people.
+            </h2>
+            <p class="no-margins">
+              Makers is a curated community designed to increase your odds of
+              building a successful venture-backed company or career in
+              startups. We onboard you with a 3-month program to help you set
+              yourself for success.
+            </p>
+            <a href="https://jobs.lever.co/makers" class="cta w-button"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-copy1 dark wf-section">
+      <div class="main-container-copy w-container">
+        <div
+          data-w-id="558027df-3c17-08e7-c7df-608f510d8554"
+          style="opacity: 0"
+          class="limit-648"
+        >
+          <h2 class="heading">
+            Do you know someone that would be a good fit for this?
+            <span class="span-accent-1">Invite them to apply.</span>
+          </h2>
+          <div class="space-40"></div>
+        </div>
+        <div id="refer" class="w-embed w-iframe w-script">
+          <div
+            data-tf-widget="slKqX9G8"
+            data-tf-opacity="100"
+            data-tf-iframe-props="title=(Website) Makers Application - Referring"
+            data-tf-transitive-search-params
+            data-tf-medium="snippet"
+            style="width: 120%; height: 600px"
+          ></div>
+          <script src="//embed.typeform.com/next/embed.js"></script>
+        </div>
+      </div>
+    </div>
+    <div class="section-copy-mobile dark wf-section">
+      <div class="main-container-copy w-container">
+        <div
+          data-w-id="db0e417e-0bd0-b80f-5de8-0d0c3c6bf52c"
+          style="opacity: 0"
+          class="limit-648"
+        >
+          <h2 class="heading">
+            Do you someone that would be a good fit for this?
+            <span class="span-accent-1">Invite them to apply.</span>
+          </h2>
+          <div class="space-40"></div>
+        </div>
+        <div class="w-embed w-iframe w-script">
+          <div
+            data-tf-widget="slKqX9G8"
+            data-tf-opacity="100"
+            data-tf-iframe-props="title=(Website) Makers Application - Referring"
+            data-tf-transitive-search-params
+            data-tf-medium="snippet"
+            style="width: 250px; height: 600px"
+          ></div>
+          <script src="//embed.typeform.com/next/embed.js"></script>
+        </div>
+      </div>
+    </div>
+    <div id="FAQ-Landing" class="section wf-section">
+      <div class="main-container w-container">
+        <div
+          data-w-id="3989afa5-55d6-b7fb-875d-38dfdc3cf5b3"
+          class="title-wrap"
+        >
+          <h2 class="no-margins">Frequently asked questions</h2>
+          <div class="space-8"></div>
+          <p class="paragraph-big">
+            You have the questions, we have the answers.
+          </p>
+        </div>
+        <div class="space-56"></div>
+        <div class="expandable-center-master">
+          <div class="expandable-single">
+            <div class="expandable-top">
+              <h3 class="faq-h3">What is Makers Fellowship?</h3>
+              <div class="plus-expand-master">
+                <div class="plus-line"></div>
+                <div class="plus-line vertical"></div>
+              </div>
+            </div>
+            <div class="expandable-bottom">
+              <p class="faq-paragraph">
+                No. Makers is not an accelerator. We don&#x27;t invest in invest
+                nor take equity on any of them. We offer an educational program
+                and community for free.
+              </p>
+            </div>
+          </div>
+          <div class="expandable-single">
+            <div class="expandable-top">
+              <h3 class="faq-h3">
+                Do I need to have a startup or project to apply?
+              </h3>
+              <div class="plus-expand-master">
+                <div class="plus-line"></div>
+                <div class="plus-line vertical"></div>
+              </div>
+            </div>
+            <div class="expandable-bottom">
+              <p class="faq-paragraph">
+                No. You don&#x27;t need to have a startup, project or even an
+                idea to apply. We take the bet on you.
+              </p>
+            </div>
+          </div>
+          <div class="expandable-single">
+            <div class="expandable-top">
+              <h3 class="faq-h3">Who can be a Maker?</h3>
+              <div class="plus-expand-master">
+                <div class="plus-line"></div>
+                <div class="plus-line vertical"></div>
+              </div>
+            </div>
+            <div class="expandable-bottom">
+              <p class="faq-paragraph">
+                Anyone from 18 to 24 years old, Latin American. You don&#x27;t
+                need to come from a top university or have raised a ton of money
+                to become a Maker.
+              </p>
+            </div>
+          </div>
+          <div class="expandable-single">
+            <div class="expandable-top">
+              <h3 class="faq-h3">Why is the program in english?</h3>
+              <div class="plus-expand-master">
+                <div class="plus-line"></div>
+                <div class="plus-line vertical"></div>
+              </div>
+            </div>
+            <div class="expandable-bottom">
+              <p class="faq-paragraph">
+                We&#x27;re all over Latin America, from Mexico to Brazil. We
+                don&#x27;t want to exclude anyone, so most of our program is in
+                English. However, if you only speak Spanish or Portuguese, you
+                can apply and become a Maker.
+              </p>
+            </div>
+          </div>
+          <div class="expandable-single">
+            <div class="expandable-top">
+              <h3 class="faq-h3">Why is it free?</h3>
+              <div class="plus-expand-master">
+                <div class="plus-line"></div>
+                <div class="plus-line vertical"></div>
+              </div>
+            </div>
+            <div class="expandable-bottom">
+              <p class="faq-paragraph">
+                We have a strong belief that even if working for or founding a
+                startup isn&#x27;t for everybody, everyone should have the
+                opportunity to be part of one or be a founder. We want to make
+                our program as inclusive as possible.
+              </p>
+            </div>
+          </div>
+          <div class="expandable-single">
+            <div class="expandable-top">
+              <h3 class="faq-h3">When is the next cohort starting?</h3>
+              <div class="plus-expand-master">
+                <div class="plus-line"></div>
+                <div class="plus-line vertical"></div>
+              </div>
+            </div>
+            <div class="expandable-bottom">
+              <p class="faq-paragraph">
+                Applications for Cohort 3 open on April 10, 2023.
+              </p>
+            </div>
+          </div>
+          <div class="expandable-single">
+            <div class="expandable-top">
+              <h3 class="faq-h3">
+                I haven&#x27;t heard back from my application
+              </h3>
+              <div class="plus-expand-master">
+                <div class="plus-line"></div>
+                <div class="plus-line vertical"></div>
+              </div>
+            </div>
+            <div class="expandable-bottom">
+              <p class="faq-paragraph">
+                We&#x27;re reviewing applications on a rolling basis. However,
+                due to the number of applications it may take a while for us to
+                answer.
+              </p>
+            </div>
+          </div>
+          <div class="expandable-single">
+            <div class="expandable-top">
+              <h3 class="faq-h3">I want to be in touch with you</h3>
+              <div class="plus-expand-master">
+                <div class="plus-line"></div>
+                <div class="plus-line vertical"></div>
+              </div>
+            </div>
+            <div class="expandable-bottom">
+              <p class="faq-paragraph">
+                Feel free to email us at team@makers.build
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section footer wf-section">
+      <div class="main-container w-container">
+        <div class="footer-bottom-flex">
+          <div
+            data-w-id="6b1605f8-afe3-bc9b-b05a-63af322749d0"
+            class="bottom-left-footer"
+          >
+            <a href="/old-home" class="brand-link-footer w-inline-block"
+              ><img
+                src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641fcb31f2602a5550e1f96a_Logo%20Makers-25%20(1).png"
+                loading="lazy"
+                sizes="(max-width: 479px) 100vw, 300px"
+                srcset="
+                  https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641fcb31f2602a5550e1f96a_Logo%20Makers-25%20(1)-p-500.png   500w,
+                  https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641fcb31f2602a5550e1f96a_Logo%20Makers-25%20(1)-p-800.png   800w,
+                  https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641fcb31f2602a5550e1f96a_Logo%20Makers-25%20(1)-p-1080.png 1080w,
+                  https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641fcb31f2602a5550e1f96a_Logo%20Makers-25%20(1)-p-1600.png 1600w,
+                  https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/641fcb31f2602a5550e1f96a_Logo%20Makers-25%20(1)-p-2000.png 2000w
+                "
+                alt=""
+                class="brand-image-footer"
+            /></a>
+            <p class="paragraph-big">
+              The top community for young talent in Latin America.
+            </p>
+            <div class="socials-wrap-footer">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-link-footer w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272a67f7779ecf746cbee_Instagram_logo_2016.svg.webp"
+                  loading="lazy"
+                  sizes="24px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272a67f7779ecf746cbee_Instagram_logo_2016.svg-p-500.webp 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272a67f7779ecf746cbee_Instagram_logo_2016.svg.webp       768w
+                  "
+                  alt=""
+                  class="social-image-footer" /></a
+              ><a
+                href="https://www.linkedin.com/school/"
+                target="_blank"
+                class="social-link-footer w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272b0a423b0da3ce7510c_640px-LinkedIn_logo_initials.png"
+                  loading="lazy"
+                  sizes="24px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272b0a423b0da3ce7510c_640px-LinkedIn_logo_initials-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272b0a423b0da3ce7510c_640px-LinkedIn_logo_initials.png       640w
+                  "
+                  alt=""
+                  class="social-image-footer" /></a
+              ><a
+                href="https://twitter.com/"
+                target="_blank"
+                class="social-link-footer w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272bb59a46dcbc8514916_Twitter-logo.svg.webp"
+                  loading="lazy"
+                  sizes="24px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272bb59a46dcbc8514916_Twitter-logo.svg-p-500.webp  500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272bb59a46dcbc8514916_Twitter-logo.svg.webp       1245w
+                  "
+                  alt=""
+                  class="social-image-footer" /></a
+              ><a
+                href="https://www.tiktok.com/@"
+                target="_blank"
+                class="social-link-footer w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272c43fc26c175ed3c1ea_tiktok-tik-tok-musically-logo-icon-social-media-icons-set-logo-illustrator-free-vector.webp"
+                  loading="lazy"
+                  sizes="24px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272c43fc26c175ed3c1ea_tiktok-tik-tok-musically-logo-icon-social-media-icons-set-logo-illustrator-free-vector-p-500.webp   500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272c43fc26c175ed3c1ea_tiktok-tik-tok-musically-logo-icon-social-media-icons-set-logo-illustrator-free-vector-p-800.webp   800w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272c43fc26c175ed3c1ea_tiktok-tik-tok-musically-logo-icon-social-media-icons-set-logo-illustrator-free-vector-p-1080.webp 1080w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272c43fc26c175ed3c1ea_tiktok-tik-tok-musically-logo-icon-social-media-icons-set-logo-illustrator-free-vector-p-1600.webp 1600w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272c43fc26c175ed3c1ea_tiktok-tik-tok-musically-logo-icon-social-media-icons-set-logo-illustrator-free-vector.webp        1920w
+                  "
+                  alt=""
+                  class="social-image-footer" /></a
+              ><a
+                href="https://www.youtube.com/@-------/videos"
+                target="_blank"
+                class="social-link-footer w-inline-block"
+                ><img
+                  src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272d3b1dc0371321b5368_Youtube_logo.png"
+                  loading="lazy"
+                  sizes="24px"
+                  srcset="
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272d3b1dc0371321b5368_Youtube_logo-p-500.png 500w,
+                    https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/642272d3b1dc0371321b5368_Youtube_logo.png       640w
+                  "
+                  alt=""
+                  class="social-image-footer" /></a
+              ><a href="#" class="social-link-footer w-inline-block"></a>
+            </div>
+          </div>
+          <div
+            data-w-id="6b1605f8-afe3-bc9b-b05a-63af322749e2"
+            class="bottom-right-footer"
+          >
+            <div class="links-heading-footer">Newsletter</div>
+            <p class="paragraph-big">
+              Stay up-to-date with our newsletter. No spam, just good stuff.
+            </p>
+            <div class="form-block-newsletter w-form">
+              <form
+                id="newsletter-form"
+                name="email-form"
+                data-name="Email Form"
+                method="get"
+                class="form-newsletter"
+              >
+                <div class="input-wrap-newsletter">
+                  <input
+                    type="email"
+                    class="text-field w-input"
+                    maxlength="256"
+                    name="Email-4"
+                    data-name="Email 4"
+                    placeholder="E-mail"
+                    id="Newsletter-email"
+                    required=""
+                  />
+                </div>
+                <div class="cta-wrap-newsletter-form">
+                  <input
+                    type="submit"
+                    value="Subscribe"
+                    data-wait="Please wait..."
+                    class="cta newsletter-submit w-button"
+                  />
+                </div>
+              </form>
+              <div class="success-message w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-100"></div>
+        <p
+          data-w-id="6b1605f8-afe3-bc9b-b05a-63af322749f4"
+          class="legal-text-footer"
+        >
+          Made with ❤️ from Latin America to the world.
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=641e18654bb664e4a54585f1"
+      type="text/javascript"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://uploads-ssl.webflow.com/641e18654bb664e4a54585f1/js/webflow.cfdd8dc7c.js"
+      type="text/javascript"
+    ></script>
+    <!--[if lte IE 9
+      ]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><!
+    [endif]--><!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TG2C4NQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
 </html>
