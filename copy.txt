@@ -1,0 +1,52 @@
+Propuestas para la redacción de la página.
+
+1. Enfoque: Personalización.
+
+Título: Aprende lo que quieras, apréndelo como quieras.
+Subtítulo: Diver Edu, la plataforma educativa para todos, única para cada persona.
+CTA: Regístrate ahora y comienza a transformar tu vida estudiando a tu manera.
+
+2. Enfoque: Personalización.
+
+Título: Donde el conocimiento es el que se adapta a tu forma de aprender.
+Subtítulo: Efectividad y personalización educativa, ahora al alcance de todos.
+CTA: Regístrate hoy y ánimate a explorar el futuro de la educación con Diver Edu.
+
+3. Enfoque: Emoción.
+
+Título: Aprende a tu manera con Diver Edu.
+Subtítulo: Miles de recursos educativos organizados en rutas de formación efectiva adaptadas a tus métodos de aprendizaje favoritos.
+CTA: Regístrate hoy y alcanza tus objetivos educativos con la ayuda personalizada de Diver Edu.
+
+3.1. Enfoque: Emoción.
+
+Título: Aprende a tu manera con Diver Edu.
+Subtítulo: Rutas de formación efectiva diseñadas para tí y tus métodos de aprendizaje favoritos.
+CTA: Regístrate hoy y alcanza tus objetivos educativos con la ayuda personalizada de Diver Edu.
+
+
+--
+
+Banco de elementos
+(Copys efectivos que pueden combinarse de distintas maneras)
+
+Títulos:
+
+1. Aprende lo que quieras, apréndelo como quieras.
+2. Donde el conocimiento es el que se adapta a tu forma de aprender.
+3. Aprende a tu manera con Diver Edu.
+4. La mejor forma de aprender es hacerlo a tu manera.
+
+Subtítulos:
+
+1. Diver Edu, la plataforma educativa para todos, única para cada persona.
+2. Efectividad y personalización educativa, ahora al alcance de todos.
+3. Rutas de formación efectiva diseñadas para tí y tus métodos de aprendizaje favoritos.
+4. Miles de recursos educativos organizados en rutas de formación efectiva adaptadas a tus métodos de aprendizaje favoritos.
+
+CTAs:
+
+1. Regístrate ahora y comienza a transformar tu vida estudiando a tu manera.
+2. Regístrate hoy y ánimate a explorar el futuro de la educación con Diver Edu.
+3. Regístrate hoy y alcanza tus objetivos educativos con la ayuda personalizada de Diver Edu.
+4. Regístrate hoy y descubre todo lo que puedes lograr con nuestro método educativo.
