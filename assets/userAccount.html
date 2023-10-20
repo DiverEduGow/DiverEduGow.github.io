@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="userAccountStyle.css">
+    <title>Inicia Sesión o Registrate</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form signup">
+            <h2>Registrate:</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <i class="fa-regular fa-user"></i>
+                <span>Nombres:</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <i class="fa-solid fa-user-check"></i>
+                <span>Apellidos:</span>
+            </div>
+            <div class="inputBox">
+                <input type="number" required="required">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>N° Celular:</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Correo Electrónico</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>Crea tu contraseña</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <i class="fa-solid fa-key"></i>
+                <span>Confirma tu contraseña</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Crear cuenta">
+            </div>
+            <p>Ya estudias con nosotros ? <a href="#" class="login">Iniciar Sesión</a></p>
+        </div>
+
+        <div class="form signin">
+            <h2>Inicia sesión:</h2>
+            <div class="inputBox">
+                <input type="email" required="required">
+                <i class="fa-regular fa-envelope-open"></i>
+                <span>Correo Electronico:</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <i class="fa-solid fa-key"></i>
+                <span>Contraseña:</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Entrar a DiverEdu">
+            </div>
+            <p>No tienes una cuenta?<a href="#" class="create"> Registrate.</a></p>
+        </div>
+    </div>
+    <script>
+        let login = document.querySelector('.login');
+        let create = document.querySelector('.create');
+        let container = document.querySelector('.container');
+
+        login.onclick = function(){
+            container.classList.add('signinForm');
+        }
+
+        create.onclick = function(){
+            container.classList.remove('signinForm');
+        }
+    </script>
+</body>
+</html>
